@@ -1,0 +1,1182 @@
+{
+    "update.home_assistant_supervisor_update": {
+        "entity_id": "update.home_assistant_supervisor_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": true,
+            "display_precision": 0,
+            "installed_version": "2025.10.0",
+            "in_progress": false,
+            "latest_version": "2025.10.0",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/supervisor/releases/tag/2025.10.0",
+            "skipped_version": null,
+            "title": "Home Assistant Supervisor",
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/hassio/icon.png",
+            "friendly_name": "Home Assistant Supervisor Update",
+            "supported_features": 1
+        },
+        "context": {
+            "id": "01K82CXBVA3K6RM56X2647C3BK",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.546Z",
+        "last_updated": "2025-10-21T03:27:25.546Z"
+    },
+    "update.home_assistant_core_update": {
+        "entity_id": "update.home_assistant_core_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "2025.10.3",
+            "in_progress": false,
+            "latest_version": "2025.10.3",
+            "release_summary": null,
+            "release_url": "https://www.home-assistant.io/latest-release-notes/",
+            "skipped_version": null,
+            "title": "Home Assistant Core",
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+            "friendly_name": "Home Assistant Core Update",
+            "supported_features": 11
+        },
+        "context": {
+            "id": "01K82CXBVBDWCH9R7JZSRH19BV",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.547Z",
+        "last_updated": "2025-10-21T03:27:25.547Z"
+    },
+    "update.matter_server_update": {
+        "entity_id": "update.matter_server_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "8.1.1",
+            "in_progress": false,
+            "latest_version": "8.1.1",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": "Matter Server",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/core_matter_server/icon",
+            "friendly_name": "Matter Server Update",
+            "supported_features": 25
+        },
+        "context": {
+            "id": "01K82CXBVB7MAVF9HTB8H0S0C2",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.547Z",
+        "last_updated": "2025-10-21T03:27:25.547Z"
+    },
+    "update.get_hacs_update": {
+        "entity_id": "update.get_hacs_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": true,
+            "display_precision": 0,
+            "installed_version": "1.3.1",
+            "in_progress": false,
+            "latest_version": "1.3.1",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": "Get HACS",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/cb646a50_get/icon",
+            "friendly_name": "Get HACS Update",
+            "supported_features": 25
+        },
+        "context": {
+            "id": "01K82CXBVBRFHJ1DSCM67WMX32",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.547Z",
+        "last_updated": "2025-10-21T03:27:25.547Z"
+    },
+    "update.file_editor_update": {
+        "entity_id": "update.file_editor_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": true,
+            "display_precision": 0,
+            "installed_version": "5.8.0",
+            "in_progress": false,
+            "latest_version": "5.8.0",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": "File editor",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/core_configurator/icon",
+            "friendly_name": "File editor Update",
+            "supported_features": 25
+        },
+        "context": {
+            "id": "01K82CXBVBCBKECSVXKZ3V3GE9",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.547Z",
+        "last_updated": "2025-10-21T03:27:25.547Z"
+    },
+    "update.home_assistant_operating_system_update": {
+        "entity_id": "update.home_assistant_operating_system_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "16.2",
+            "in_progress": false,
+            "latest_version": "16.2",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/operating-system/releases/tag/16.2",
+            "skipped_version": null,
+            "title": "Home Assistant Operating System",
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+            "friendly_name": "Home Assistant Operating System Update",
+            "supported_features": 11
+        },
+        "context": {
+            "id": "01K82CXBVB5FKHPDBK1QQ6CNMF",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.547Z",
+        "last_updated": "2025-10-21T03:27:25.547Z"
+    },
+    "conversation.home_assistant": {
+        "entity_id": "conversation.home_assistant",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Home Assistant",
+            "supported_features": 1
+        },
+        "context": {
+            "id": "01K82CXC29HTYV1GERTAVZQSSN",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.769Z",
+        "last_updated": "2025-10-21T03:27:25.769Z"
+    },
+    "event.backup_automatic_backup": {
+        "entity_id": "event.backup_automatic_backup",
+        "state": "unknown",
+        "attributes": {
+            "event_types": [
+                "completed",
+                "failed",
+                "in_progress"
+            ],
+            "event_type": null,
+            "friendly_name": "Backup Automatic backup"
+        },
+        "context": {
+            "id": "01K82CXC3KK2AEGB4AWG1VEQ9A",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.811Z",
+        "last_updated": "2025-10-21T03:27:25.811Z"
+    },
+    "sensor.backup_backup_manager_state": {
+        "entity_id": "sensor.backup_backup_manager_state",
+        "state": "idle",
+        "attributes": {
+            "options": [
+                "idle",
+                "create_backup",
+                "blocked",
+                "receive_backup",
+                "restore_backup"
+            ],
+            "device_class": "enum",
+            "friendly_name": "Backup Backup Manager state"
+        },
+        "context": {
+            "id": "01K82CXK6719YDRK0BXKJQ6A64",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:33.063Z",
+        "last_updated": "2025-10-21T03:27:33.063Z"
+    },
+    "sensor.backup_next_scheduled_automatic_backup": {
+        "entity_id": "sensor.backup_next_scheduled_automatic_backup",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Backup Next scheduled automatic backup"
+        },
+        "context": {
+            "id": "01K82CXC3M3ZE6Z065F9KDP2AG",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.812Z",
+        "last_updated": "2025-10-21T03:27:25.812Z"
+    },
+    "sensor.backup_last_successful_automatic_backup": {
+        "entity_id": "sensor.backup_last_successful_automatic_backup",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Backup Last successful automatic backup"
+        },
+        "context": {
+            "id": "01K82CXC3MXNBX5FTKYCGJQM38",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.812Z",
+        "last_updated": "2025-10-21T03:27:25.812Z"
+    },
+    "sensor.backup_last_attempted_automatic_backup": {
+        "entity_id": "sensor.backup_last_attempted_automatic_backup",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Backup Last attempted automatic backup"
+        },
+        "context": {
+            "id": "01K82CXC3MXNJ0WSAS00MJZZJ8",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:25.812Z",
+        "last_updated": "2025-10-21T03:27:25.812Z"
+    },
+    "scene.watch_tv": {
+        "entity_id": "scene.watch_tv",
+        "state": "2025-10-21T04:19:45.374392+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.sony_led",
+                "remote.basement_tv",
+                "select.basement_tv_activities"
+            ],
+            "id": "1760675115026",
+            "icon": "mdi:television",
+            "friendly_name": "Watch TV"
+        },
+        "context": {
+            "id": "01K82FX62YJMWXZCGV4VCM6QYR",
+            "parent_id": null,
+            "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
+        },
+        "last_changed": "2025-10-21T04:19:45.374Z",
+        "last_updated": "2025-10-21T04:19:45.374Z"
+    },
+    "zone.home": {
+        "entity_id": "zone.home",
+        "state": "1",
+        "attributes": {
+            "latitude": 38.847823,
+            "longitude": -77.4444095,
+            "radius": 100,
+            "passive": false,
+            "persons": [
+                "person.ryan_gilligan"
+            ],
+            "editable": true,
+            "icon": "mdi:home",
+            "friendly_name": "Home"
+        },
+        "context": {
+            "id": "01K82CXCBKK2D0SF375QK3BQ4R",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:26.067Z",
+        "last_updated": "2025-10-21T03:27:26.067Z"
+    },
+    "person.ryan_gilligan": {
+        "entity_id": "person.ryan_gilligan",
+        "state": "home",
+        "attributes": {
+            "editable": true,
+            "id": "ryan_gilligan",
+            "device_trackers": [
+                "device_tracker.pixel_9_pro_xl"
+            ],
+            "latitude": 38.8478273,
+            "longitude": -77.4443959,
+            "gps_accuracy": 30,
+            "source": "device_tracker.pixel_9_pro_xl",
+            "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2",
+            "friendly_name": "Ryan Gilligan"
+        },
+        "context": {
+            "id": "01K83AWB3M0K5J9FCH6YKY6TBK",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:26.066Z",
+        "last_updated": "2025-10-21T12:11:09.300Z"
+    },
+    "sun.sun": {
+        "entity_id": "sun.sun",
+        "state": "above_horizon",
+        "attributes": {
+            "next_dawn": "2025-10-22T10:59:09.832347+00:00",
+            "next_dusk": "2025-10-21T22:49:50.941006+00:00",
+            "next_midnight": "2025-10-22T04:54:08+00:00",
+            "next_noon": "2025-10-21T16:54:24+00:00",
+            "next_rising": "2025-10-22T11:26:48.632801+00:00",
+            "next_setting": "2025-10-21T22:22:16.728087+00:00",
+            "elevation": 14.21,
+            "azimuth": 116.96,
+            "rising": true,
+            "friendly_name": "Sun"
+        },
+        "context": {
+            "id": "01K83CZ6RKTWXGXCZNVG18G3MC",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:24:10.465Z",
+        "last_updated": "2025-10-21T12:47:40.307Z"
+    },
+    "sensor.sun_next_dawn": {
+        "entity_id": "sensor.sun_next_dawn",
+        "state": "2025-10-22T10:59:09+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next dawn"
+        },
+        "context": {
+            "id": "01K836PPWGKZG333CHZZFXGJ1R",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T10:58:10.448Z",
+        "last_updated": "2025-10-21T10:58:10.448Z"
+    },
+    "sensor.sun_next_dusk": {
+        "entity_id": "sensor.sun_next_dusk",
+        "state": "2025-10-21T22:49:50+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next dusk"
+        },
+        "context": {
+            "id": "01K82CXE0CYYY08E0MEYEZYDSQ",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:27.756Z",
+        "last_updated": "2025-10-21T03:27:27.756Z"
+    },
+    "sensor.sun_next_midnight": {
+        "entity_id": "sensor.sun_next_midnight",
+        "state": "2025-10-22T04:54:08+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next midnight"
+        },
+        "context": {
+            "id": "01K82HWD5BT6MADN8N93WGT3Q7",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T04:54:17.003Z",
+        "last_updated": "2025-10-21T04:54:17.003Z"
+    },
+    "sensor.sun_next_noon": {
+        "entity_id": "sensor.sun_next_noon",
+        "state": "2025-10-21T16:54:24+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next noon"
+        },
+        "context": {
+            "id": "01K82CXE0DN4W432Z346Q126MV",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:27.757Z",
+        "last_updated": "2025-10-21T03:27:27.757Z"
+    },
+    "sensor.sun_next_rising": {
+        "entity_id": "sensor.sun_next_rising",
+        "state": "2025-10-22T11:26:48+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next rising"
+        },
+        "context": {
+            "id": "01K838986AKB650E07DGND31MV",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:25:46.570Z",
+        "last_updated": "2025-10-21T11:25:46.570Z"
+    },
+    "sensor.sun_next_setting": {
+        "entity_id": "sensor.sun_next_setting",
+        "state": "2025-10-21T22:22:16+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next setting"
+        },
+        "context": {
+            "id": "01K82CXE0DZGFRHQQ22D4529PN",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:27.757Z",
+        "last_updated": "2025-10-21T03:27:27.757Z"
+    },
+    "govee.state": {
+        "entity_id": "govee.state",
+        "state": "async_setup called",
+        "attributes": {},
+        "context": {
+            "id": "01K82CXE3H9XKDGB5R25YN6DGZ",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:27.857Z",
+        "last_updated": "2025-10-21T03:27:27.857Z"
+    },
+    "automation.turn_off_fan": {
+        "entity_id": "automation.turn_off_fan",
+        "state": "on",
+        "attributes": {
+            "id": "1760662652211",
+            "last_triggered": "2025-10-21T10:30:00.329558+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "Turn off Fan"
+        },
+        "context": {
+            "id": "01K83534C9GV5GNYRR696JVZQT",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.311Z",
+        "last_updated": "2025-10-21T10:30:00.414Z"
+    },
+    "device_tracker.pixel_9_pro_xl": {
+        "entity_id": "device_tracker.pixel_9_pro_xl",
+        "state": "home",
+        "attributes": {
+            "source_type": "gps",
+            "latitude": 38.8478273,
+            "longitude": -77.4443959,
+            "gps_accuracy": 30,
+            "altitude": 46,
+            "course": 0,
+            "speed": 0,
+            "vertical_accuracy": 0,
+            "friendly_name": "Pixel 9 Pro XL"
+        },
+        "context": {
+            "id": "01K83AWB3M9AE1GV93N6NB6NX0",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T12:11:09.300Z",
+        "last_updated": "2025-10-21T12:11:09.300Z"
+    },
+    "sensor.pixel_9_pro_xl_battery_level": {
+        "entity_id": "sensor.pixel_9_pro_xl_battery_level",
+        "state": "100",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "icon": "mdi:battery",
+            "friendly_name": "Pixel 9 Pro XL Battery level"
+        },
+        "context": {
+            "id": "01K836YABP3CAA4M3VCMSR093C",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T09:57:58.919Z",
+        "last_updated": "2025-10-21T11:02:19.766Z"
+    },
+    "sensor.pixel_9_pro_xl_battery_state": {
+        "entity_id": "sensor.pixel_9_pro_xl_battery_state",
+        "state": "discharging",
+        "attributes": {
+            "options": [
+                "charging",
+                "discharging",
+                "full",
+                "not_charging"
+            ],
+            "device_class": "enum",
+            "icon": "mdi:battery-minus",
+            "friendly_name": "Pixel 9 Pro XL Battery state"
+        },
+        "context": {
+            "id": "01K836YABPCEK3S97FR3RP88MN",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:02:19.766Z",
+        "last_updated": "2025-10-21T11:02:19.766Z"
+    },
+    "sensor.pixel_9_pro_xl_charger_type": {
+        "entity_id": "sensor.pixel_9_pro_xl_charger_type",
+        "state": "none",
+        "attributes": {
+            "options": [
+                "ac",
+                "usb",
+                "wireless",
+                "dock",
+                "none"
+            ],
+            "device_class": "enum",
+            "icon": "mdi:battery",
+            "friendly_name": "Pixel 9 Pro XL Charger type"
+        },
+        "context": {
+            "id": "01K836YABP19ANQ53VTQZ71ZMK",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:02:19.766Z",
+        "last_updated": "2025-10-21T11:02:19.766Z"
+    },
+    "update.hacs_update": {
+        "entity_id": "update.hacs_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "2.0.5",
+            "in_progress": false,
+            "latest_version": "2.0.5",
+            "release_summary": null,
+            "release_url": "https://github.com/hacs/integration/releases/2.0.5",
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/_/hacs/icon.png",
+            "friendly_name": "HACS update",
+            "supported_features": 23
+        },
+        "context": {
+            "id": "01K82CXEKQQ77Z70XBMCYFRJHF",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.375Z",
+        "last_updated": "2025-10-21T03:27:28.375Z"
+    },
+    "update.govee_update": {
+        "entity_id": "update.govee_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "2025.7.1",
+            "in_progress": false,
+            "latest_version": "2025.7.1",
+            "release_summary": null,
+            "release_url": "https://github.com/LaggAt/hacs-govee/releases/2025.7.1",
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/_/govee/icon.png",
+            "friendly_name": "govee update",
+            "supported_features": 23
+        },
+        "context": {
+            "id": "01K82CXEKQ9V0KT1TP7WRGRX2P",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.375Z",
+        "last_updated": "2025-10-21T03:27:28.375Z"
+    },
+    "script.watch_tv": {
+        "entity_id": "script.watch_tv",
+        "state": "off",
+        "attributes": {
+            "last_triggered": "2025-10-20T03:47:21.830587+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "Watch TV"
+        },
+        "context": {
+            "id": "01K82CXEKRBAJPZ48PVFAX39TK",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.376Z",
+        "last_updated": "2025-10-21T03:27:28.376Z"
+    },
+    "script.toggle_bedroom_ceiling_fan": {
+        "entity_id": "script.toggle_bedroom_ceiling_fan",
+        "state": "off",
+        "attributes": {
+            "last_triggered": "2025-10-21T04:43:43.037572+00:00",
+            "mode": "single",
+            "current": 0,
+            "icon": "mdi:fan",
+            "friendly_name": "Toggle Bedroom Ceiling Fan"
+        },
+        "context": {
+            "id": "01K82H921X1NGPAK5J3YEC5V7K",
+            "parent_id": null,
+            "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
+        },
+        "last_changed": "2025-10-21T04:43:43.262Z",
+        "last_updated": "2025-10-21T04:43:43.262Z"
+    },
+    "todo.shopping_list": {
+        "entity_id": "todo.shopping_list",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "Shopping List",
+            "supported_features": 15
+        },
+        "context": {
+            "id": "01K82CXEKYY538VEZP2P07F9JX",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.382Z",
+        "last_updated": "2025-10-21T03:27:28.382Z"
+    },
+    "tts.google_translate_en_com": {
+        "entity_id": "tts.google_translate_en_com",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Google Translate en com"
+        },
+        "context": {
+            "id": "01K82CXEM7YTAVQ8Q2N75AT0HF",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.391Z",
+        "last_updated": "2025-10-21T03:27:28.391Z"
+    },
+    "light.sony_led": {
+        "entity_id": "light.sony_led",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 9000,
+            "max_color_temp_kelvin": 2000,
+            "min_mireds": 500,
+            "max_mireds": 111,
+            "supported_color_modes": [
+                "color_temp",
+                "hs"
+            ],
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "rate_limit_total": 100,
+            "rate_limit_remaining": -3303,
+            "rate_limit_reset_seconds": -1761051074.5,
+            "rate_limit_reset": "1969-12-31T19:00:00",
+            "rate_limit_on": 5,
+            "manufacturer": "Govee",
+            "model": "H6199",
+            "friendly_name": "Sony LED",
+            "supported_features": 0
+        },
+        "context": {
+            "id": "01K83D5QY2E5HS3T2BRNGNJ95X",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T04:20:42.495Z",
+        "last_updated": "2025-10-21T12:51:14.498Z"
+    },
+    "binary_sensor.light_cloud_connection": {
+        "entity_id": "binary_sensor.light_cloud_connection",
+        "state": "on",
+        "attributes": {
+            "device_class": "connectivity",
+            "friendly_name": "Light Cloud connection"
+        },
+        "context": {
+            "id": "01K82CXEVFZJCT66AKWDYE59KP",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.623Z",
+        "last_updated": "2025-10-21T03:27:28.623Z"
+    },
+    "switch.light": {
+        "entity_id": "switch.light",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Light"
+        },
+        "context": {
+            "id": "01K837WBY267W7JSFHRV6TNE6M",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:18:44.418Z",
+        "last_updated": "2025-10-21T11:18:44.418Z"
+    },
+    "switch.light_led": {
+        "entity_id": "switch.light_led",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Light LED"
+        },
+        "context": {
+            "id": "01K82CXEVH69C1N1GNRS2EMS1C",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.625Z",
+        "last_updated": "2025-10-21T03:27:28.625Z"
+    },
+    "weather.forecast_home": {
+        "entity_id": "weather.forecast_home",
+        "state": "partlycloudy",
+        "attributes": {
+            "temperature": 47,
+            "dew_point": 39,
+            "temperature_unit": "°F",
+            "humidity": 73,
+            "cloud_coverage": 34.4,
+            "uv_index": 0.2,
+            "pressure": 29.96,
+            "pressure_unit": "inHg",
+            "wind_bearing": 160.9,
+            "wind_speed": 6.96,
+            "wind_speed_unit": "mph",
+            "visibility_unit": "mi",
+            "precipitation_unit": "in",
+            "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+            "friendly_name": "Forecast Home",
+            "supported_features": 3
+        },
+        "context": {
+            "id": "01K83AS8WFACGYF37Q5J63CFJD",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T12:09:28.719Z",
+        "last_updated": "2025-10-21T12:09:28.719Z"
+    },
+    "binary_sensor.ceiling_fan_cloud_connection": {
+        "entity_id": "binary_sensor.ceiling_fan_cloud_connection",
+        "state": "on",
+        "attributes": {
+            "device_class": "connectivity",
+            "friendly_name": "Bedroom Cloud connection"
+        },
+        "context": {
+            "id": "01K82CXEWDD1FQJW2GM77N3A7J",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.653Z",
+        "last_updated": "2025-10-21T03:27:28.653Z"
+    },
+    "binary_sensor.ceiling_fan_overheated": {
+        "entity_id": "binary_sensor.ceiling_fan_overheated",
+        "state": "off",
+        "attributes": {
+            "device_class": "problem",
+            "friendly_name": "Bedroom Overheated"
+        },
+        "context": {
+            "id": "01K82CXEWDS9PA3SDNZTQ8F689",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.653Z",
+        "last_updated": "2025-10-21T03:27:28.653Z"
+    },
+    "binary_sensor.ceiling_fan_overheated_2": {
+        "entity_id": "binary_sensor.ceiling_fan_overheated_2",
+        "state": "off",
+        "attributes": {
+            "device_class": "problem",
+            "friendly_name": "Bedroom Overheated"
+        },
+        "context": {
+            "id": "01K82CXEWD23Z0VJJQCA0S5XGN",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.653Z",
+        "last_updated": "2025-10-21T03:27:28.653Z"
+    },
+    "fan.ceiling_fan_ceiling_fan": {
+        "entity_id": "fan.ceiling_fan_ceiling_fan",
+        "state": "off",
+        "attributes": {
+            "preset_modes": null,
+            "percentage": null,
+            "percentage_step": 25,
+            "preset_mode": null,
+            "friendly_name": "Bedroom Ceiling Fan",
+            "supported_features": 49
+        },
+        "context": {
+            "id": "01K83534C9GV5GNYRR696JVZQT",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T10:30:00.809Z",
+        "last_updated": "2025-10-21T10:30:00.809Z"
+    },
+    "light.ceiling_fan_dimmer_switch": {
+        "entity_id": "light.ceiling_fan_dimmer_switch",
+        "state": "off",
+        "attributes": {
+            "supported_color_modes": [
+                "brightness"
+            ],
+            "color_mode": null,
+            "brightness": null,
+            "friendly_name": "Bedroom Dimmer Switch",
+            "supported_features": 32
+        },
+        "context": {
+            "id": "01K82CXEWGXTWEGE6B9EA8ZYKY",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.656Z",
+        "last_updated": "2025-10-21T03:27:28.656Z"
+    },
+    "number.ceiling_fan_smooth_on": {
+        "entity_id": "number.ceiling_fan_smooth_on",
+        "state": "1",
+        "attributes": {
+            "min": 0,
+            "max": 60,
+            "step": 1,
+            "mode": "box",
+            "friendly_name": "Bedroom Smooth on"
+        },
+        "context": {
+            "id": "01K82CXEWG8NGS7MAZ5RPH6DHC",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.656Z",
+        "last_updated": "2025-10-21T03:27:28.656Z"
+    },
+    "number.ceiling_fan_smooth_off": {
+        "entity_id": "number.ceiling_fan_smooth_off",
+        "state": "1",
+        "attributes": {
+            "min": 0,
+            "max": 60,
+            "step": 1,
+            "mode": "box",
+            "friendly_name": "Bedroom Smooth off"
+        },
+        "context": {
+            "id": "01K82CXEWG28ZFN9BKWTYV4NAD",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.656Z",
+        "last_updated": "2025-10-21T03:27:28.656Z"
+    },
+    "select.ceiling_fan_light_preset": {
+        "entity_id": "select.ceiling_fan_light_preset",
+        "state": "Light preset 5",
+        "attributes": {
+            "options": [
+                "Not set",
+                "Light preset 1",
+                "Light preset 2",
+                "Light preset 3",
+                "Light preset 4",
+                "Light preset 5"
+            ],
+            "friendly_name": "Bedroom Light preset"
+        },
+        "context": {
+            "id": "01K82CXEWHNS37P57X5YN8KB9C",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.657Z",
+        "last_updated": "2025-10-21T03:27:28.657Z"
+    },
+    "sensor.ceiling_fan_signal_level": {
+        "entity_id": "sensor.ceiling_fan_signal_level",
+        "state": "2",
+        "attributes": {
+            "state_class": "measurement",
+            "friendly_name": "Bedroom Signal level"
+        },
+        "context": {
+            "id": "01K83981JBQYKMAN5JD45E75HP",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:42:35.595Z",
+        "last_updated": "2025-10-21T11:42:35.595Z"
+    },
+    "switch.ceiling_fan_auto_update_enabled": {
+        "entity_id": "switch.ceiling_fan_auto_update_enabled",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Bedroom Auto-update enabled"
+        },
+        "context": {
+            "id": "01K82CXEWKSEV6CACE7DCC9KNF",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.659Z",
+        "last_updated": "2025-10-21T03:27:28.659Z"
+    },
+    "switch.ceiling_fan_led": {
+        "entity_id": "switch.ceiling_fan_led",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Bedroom LED"
+        },
+        "context": {
+            "id": "01K82CXEWKSF8RG55PHJ7NMX41",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.659Z",
+        "last_updated": "2025-10-21T03:27:28.659Z"
+    },
+    "switch.ceiling_fan_fan_sleep_mode": {
+        "entity_id": "switch.ceiling_fan_fan_sleep_mode",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Bedroom Fan sleep mode"
+        },
+        "context": {
+            "id": "01K82CXEWK8WJCH7WZGVKSKWJQ",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:28.659Z",
+        "last_updated": "2025-10-21T03:27:28.659Z"
+    },
+    "media_player.new_google_tv": {
+        "entity_id": "media_player.new_google_tv",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "New Google TV",
+            "supported_features": 152449
+        },
+        "context": {
+            "id": "01K83BRWV6H5H2FJDHDXXPEGGT",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T12:26:44.966Z",
+        "last_updated": "2025-10-21T12:26:44.966Z"
+    },
+    "media_player.google_tv": {
+        "entity_id": "media_player.google_tv",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Google TV",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K82VN747SY6P8ZPSEZKV1GTZ",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T07:45:07.207Z",
+        "last_updated": "2025-10-21T07:45:07.207Z"
+    },
+    "media_player.bedroom_speaker": {
+        "entity_id": "media_player.bedroom_speaker",
+        "state": "off",
+        "attributes": {
+            "device_class": "speaker",
+            "friendly_name": "Bedroom speaker",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K83AG8PB3XHC8W8583D32N1H",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T12:04:33.611Z",
+        "last_updated": "2025-10-21T12:04:33.611Z"
+    },
+    "media_player.dining_room_speaker": {
+        "entity_id": "media_player.dining_room_speaker",
+        "state": "off",
+        "attributes": {
+            "device_class": "speaker",
+            "friendly_name": "Dining Room speaker",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K82R2A419EH8CSBFNDWY9GGK",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T06:42:21.953Z",
+        "last_updated": "2025-10-21T06:42:21.953Z"
+    },
+    "select.basement_tv_activities": {
+        "entity_id": "select.basement_tv_activities",
+        "state": "power_off",
+        "attributes": {
+            "options": [
+                "power_off",
+                "Shield TV",
+                "Switch"
+            ],
+            "friendly_name": "Basement TV Activities"
+        },
+        "context": {
+            "id": "01K82FWXE9A0HVDCJG7GAZR806",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T04:19:36.521Z",
+        "last_updated": "2025-10-21T04:19:36.521Z"
+    },
+    "remote.basement_tv": {
+        "entity_id": "remote.basement_tv",
+        "state": "off",
+        "attributes": {
+            "activity_list": [
+                "Switch",
+                "Shield TV"
+            ],
+            "current_activity": "PowerOff",
+            "activity_starting": null,
+            "devices_list": [
+                "Sony AV Receiver",
+                "NVIDIA Game Console",
+                "Google Chromecast",
+                "Sony TV"
+            ],
+            "last_activity": "Shield TV",
+            "friendly_name": "Basement TV",
+            "supported_features": 4
+        },
+        "context": {
+            "id": "01K82FWTBD3JR1PWGA1PKY61HP",
+            "parent_id": null,
+            "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
+        },
+        "last_changed": "2025-10-21T04:19:36.521Z",
+        "last_updated": "2025-10-21T04:19:36.551Z"
+    },
+    "media_player.all_speakers": {
+        "entity_id": "media_player.all_speakers",
+        "state": "off",
+        "attributes": {
+            "device_class": "speaker",
+            "friendly_name": "All Speakers ",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K82R2BHPF1DMP8P13RKX1895",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T06:42:23.414Z",
+        "last_updated": "2025-10-21T06:42:23.414Z"
+    },
+    "media_player.upstairs": {
+        "entity_id": "media_player.upstairs",
+        "state": "off",
+        "attributes": {
+            "device_class": "speaker",
+            "friendly_name": "Upstairs",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K82R2GDEDR9W244KDXPKXAFC",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T06:42:28.398Z",
+        "last_updated": "2025-10-21T06:42:28.398Z"
+    },
+    "media_player.sony_tv": {
+        "entity_id": "media_player.sony_tv",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Sony TV",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K8318PVHNXQK58ES9G4YRQ3T",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T09:23:08.785Z",
+        "last_updated": "2025-10-21T09:23:08.785Z"
+    },
+    "media_player.shiwbeieheuveheheehh": {
+        "entity_id": "media_player.shiwbeieheuveheheehh",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Shield",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K82WNFAXMB094BJG7MZX5QTS",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T08:02:44.189Z",
+        "last_updated": "2025-10-21T08:02:44.189Z"
+    },
+    "media_player.lg_webos_tv_oled48b5pua": {
+        "entity_id": "media_player.lg_webos_tv_oled48b5pua",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "[LG] webOS TV OLED48B5PUA",
+            "supported_features": 152461
+        },
+        "context": {
+            "id": "01K837WDGHYABNJ9FASAZ8SMPV",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T11:18:46.033Z",
+        "last_updated": "2025-10-21T11:18:46.033Z"
+    },
+    "update.govee_lights_bluetooth_update": {
+        "entity_id": "update.govee_lights_bluetooth_update",
+        "state": "unavailable",
+        "attributes": {
+            "restored": true,
+            "friendly_name": "Govee lights (bluetooth) update",
+            "supported_features": 23
+        },
+        "context": {
+            "id": "01K82CXJX6RX1M0BCV9CMJA78Y",
+            "parent_id": null,
+            "user_id": null
+        },
+        "last_changed": "2025-10-21T03:27:32.774Z",
+        "last_updated": "2025-10-21T03:27:32.774Z"
+    }
+}
