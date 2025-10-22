@@ -53,9 +53,6 @@ const checkToggle = (entity_id: string) => {
               />
               {{ getEntity(entity.entity_id)?.state }}
             </div>
-            <!-- <div>
-            <Button @click="getEntity(device.entity_ids)" />
-          </div> -->
           </div>
         </div>
       </template>

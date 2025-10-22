@@ -45,7 +45,8 @@ export const useRootStore = defineStore('root', () => {
 
       const devices = await conn.sendMessagePromise({ type: 'config/device_registry/list' })
       const entities = await conn.sendMessagePromise({ type: 'config/entity_registry/list' })
-
+      console.log('dev', devices)
+      console.log('entit', entities)
       const filteredDevices = devices.filter((device) => device.area_id)
 
       for (const device of filteredDevices) {
