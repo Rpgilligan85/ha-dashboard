@@ -6,12 +6,10 @@ import Button from 'primevue/button'
 import ToggleSwitch from 'primevue/toggleswitch'
 
 const rootStore = useRootStore()
-const devices = ref()
 
 onMounted(async () => {
-  await rootStore.connect()
-  devices.value = await rootStore.getAllDevices()
-  console.log('getAllDevices', devices.value)
+  await rootStore.loadData()
+  // console.log('getAllDevices', devices.value)
 })
 
 const getEntity = (entityId: string) => {
@@ -36,23 +34,27 @@ const checkToggle = (entity_id: string) => {
 
 <template>
   <div class="grid m-4">
-    <Card v-for="room in devices" :key="room.id" class="p-3 flex">
+    <Card v-for="room in rootStore.getDataByArea" :key="room" class="p-3 flex">
       <template #header>
         {{ room[0].area_id }}
       </template>
       <template #content>
-        <div v-for="device in room" :key="device.id">
-          <div v-for="entity in device.entities" :key="entity.id">
-            <span>
-              {{ entity.name ?? entity.original_name }}
-            </span>
-            <div v-if="checkToggle(entity.entity_id)" class="card flex justify-center">
-              <ToggleSwitch
-                :model-value="getEntityState(entity.entity_id)"
-                @update:model-value="updateState($event, entity.entity_id)"
-              />
-              {{ getEntity(entity.entity_id)?.state }}
-            </div>
+        <div v-for="entity in room" :key="entity.id">
+          <span>
+            {{ entity.name ?? entity.original_name }}
+          </span>
+          <div v-if="checkToggle(entity.entity_id)" class="card flex justify-center">
+            <span
+              style="cursor: pointer"
+              @click="updateState(getEntity(entity.entity_id)?.state, entity.entity_id)"
+              class="material-symbols-outlined"
+              >{{ getEntity(entity.entity_id)?.state ? 'lightbulb' : 'light_off' }}</span
+            >
+            <!-- <ToggleSwitch
+              :model-value="getEntityState(entity.entity_id)"
+              @update:model-value=""
+            /> -->
+            {{ getEntity(entity.entity_id)?.state }}
           </div>
         </div>
       </template>

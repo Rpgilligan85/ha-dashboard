@@ -23,6 +23,7 @@
     "axios": "^1.12.2",
     "home-assistant-js-websocket": "^9.5.0",
     "lodash": "^4.17.21",
+    "material-symbols": "^0.38.0",
     "pinia": "^3.0.3",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",

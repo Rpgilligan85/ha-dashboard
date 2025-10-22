@@ -12,6 +12,10 @@ import {
 } from 'home-assistant-js-websocket'
 import { groupBy } from 'lodash'
 
+import entitiesWS from '@/assets/ent.json' with {type: 'json'};
+import entityList from '@/assets/entities.json' with {type: 'json'};
+import deviceList from '@/assets/devices.json' with {type: 'json'};
+
 export const useRootStore = defineStore('root', () => {
   const entities: Ref<HassEntities | null> = ref(null)
   const connection: Ref<Connection | null> = ref(null)
@@ -19,58 +23,71 @@ export const useRootStore = defineStore('root', () => {
   const token = ref<string>(import.meta.env.VITE_HA_TOKEN)
   const listOfEntities = ['light.', 'remote.', 'fan.', 'select.']
   const toggleEvents = ['light.', 'remote.', 'fan.']
+  const useLocalData = ref(true);
+  const finalData = ref<any[]>([]);
 
-  const connect = async (): Promise<void> => {
-    try {
-      const auth = createLongLivedTokenAuth(haUrl.value, token.value)
-      const conn = await createConnection({ auth })
-      connection.value = conn
+  const getDataByArea: Ref<Record<string, any[]>> = computed(() => {
+    return groupBy(finalData.value, 'area_id')
+  })
 
-      subscribeEntities(conn, (ent: HassEntities) => {
-        entities.value = ent
-        console.log('ENT', ent)
-      })
+  const loadData = async (): Promise<void> => {
+    if (useLocalData.value) {
+      entities.value = entitiesWS as HassEntities;
+      console.log('entitiesWS', entitiesWS);
+      console.log('entityList', entityList);
+      console.log('deviceList', deviceList);
+      await createDatastructure(deviceList, entityList)
+    } else {
+      try {
+        const auth = createLongLivedTokenAuth(haUrl.value, token.value)
+        const conn = await createConnection({ auth })
 
-      await getAllDevices()
-    } catch (error) {
-      console.error('Failed to connect to Home Assistant:', error)
-      throw error
+        connection.value = conn
+
+        const deviceList: any[] = await conn.sendMessagePromise({ type: 'config/device_registry/list' })
+        const entityList: any[] = await conn.sendMessagePromise({ type: 'config/entity_registry/list' })
+
+        subscribeEntities(conn, (ent: HassEntities) => {
+          entities.value = ent
+          console.log('ENT', ent)
+        })
+
+        await createDatastructure(deviceList, entityList)
+      } catch (error) {
+        console.error('Failed to connect to Home Assistant:', error)
+        throw error
+      }
     }
   }
 
-  const getAllDevices = async (): Promise<any[]> => {
+  const createDatastructure = async (deviceList: any[], entityList: any[]): Promise<any[]> => {
     try {
-      const auth = createLongLivedTokenAuth(haUrl.value, token.value)
-      const conn = await createConnection({ auth })
-
-      const devices = await conn.sendMessagePromise({ type: 'config/device_registry/list' })
-      const entities = await conn.sendMessagePromise({ type: 'config/entity_registry/list' })
-      console.log('dev', devices)
-      console.log('entit', entities)
-      const filteredDevices = devices.filter((device) => device.area_id)
+      const filteredDevices = deviceList.filter((device) => device.area_id)
 
       for (const device of filteredDevices) {
-        device.entities = []
-        for (const entity of entities) {
+        for (const entity of entityList) {
           if (entity.device_id === device.id) {
             if (listOfEntities.some((prefix) => entity.entity_id.startsWith(prefix))) {
-              device.entities.push(entity)
+              finalData.value.push({ ...entity, area_id: device.area_id, device_name: device.name })
             }
           }
         }
       }
+      console.log('finalData', finalData.value)
 
-      console.log(filteredDevices)
-      return groupBy(filteredDevices, 'area_id')
     } catch (error) {
       console.error('Failed to fetch devices:', error)
       throw error
     }
   }
 
-  const updateState = async (entityId: string, state: boolean): Promise<void> => {
-    if (!connection.value) {
+  const updateState = async (entityId: string, state: string): Promise<void> => {
+    if (!connection.value && useLocalData.value === false) {
       console.error('No active connection to Home Assistant')
+      return
+    }
+    if (useLocalData.value) {
+      entities.value[entityId].state = state === 'on' ? 'off' : 'on'
       return
     }
 
@@ -92,12 +109,13 @@ export const useRootStore = defineStore('root', () => {
 
   return {
     env: import.meta.env,
-    connect,
+    loadData,
     entities,
     haUrl,
     token,
-    getAllDevices,
+    createDatastructure,
     updateState,
     toggleEvents,
+    getDataByArea
   }
 })
