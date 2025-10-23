@@ -7,7 +7,6 @@ import {
   subscribeEntities,
   callService,
   type HassEntities,
-  type HassServices,
   type Connection,
 } from 'home-assistant-js-websocket'
 import { groupBy } from 'lodash'

@@ -46,6 +46,8 @@
   --p-text-hover-color: var(--p-surface-800);
   --p-text-muted-color: var(--p-surface-500);
   --p-text-hover-muted-color: var(--p-surface-600);
+  --p-card-background: var(p-surface-700);
+  --p-card-color: var(--p-surface-0);
 }
 
 :root.p-dark {
@@ -66,6 +68,11 @@
   --p-text-hover-muted-color: var(--p-surface-300);
 }
 
-.p-dark {
+:root[class='app-dark'] .p-dark {
   color-scheme: dark;
+}
+
+body {
+  background-color: var(--p-surface-950);
+  color: var(--p-surface-50);
 }

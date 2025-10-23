@@ -18,12 +18,12 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@primeuix/themes": "^1.2.0-beta.2",
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.4.47",
     "@tailwindcss/vite": "^4.1.15",
     "axios": "^1.12.2",
     "home-assistant-js-websocket": "^9.5.0",
     "lodash": "^4.17.21",
-    "material-symbols": "^0.38.0",
     "pinia": "^3.0.3",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
@@ -50,6 +50,7 @@
     "npm-run-all2": "^8.0.4",
     "oxlint": "~1.11.0",
     "prettier": "3.6.2",
+    "sass-embedded": "^1.93.2",
     "typescript": "~5.9.0",
     "vite": "npm:rolldown-vite@latest",
     "vite-plugin-vue-devtools": "^8.0.2",
