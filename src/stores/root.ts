@@ -73,6 +73,11 @@ export const useRootStore = defineStore('root', () => {
           }
         }
       }
+      finalData.value.sort((a, b) => {
+        if (a.entity_id < b.entity_id) return -1
+        if (a.entity_id > b.entity_id) return 1
+        return 0
+      })
       console.log('finalData', finalData.value)
 
     } catch (error) {
