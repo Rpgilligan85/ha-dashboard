@@ -1,12 +1,15 @@
 <template>
-  <Card>
-    <template #header>
-      <div class="flex flex-row content-center">
+  <Card
+    :style="{
+      backgroundColor: entityState === 'on' ? 'var(--p-primary-900)' : 'var(--p-surface-500)',
+    }"
+    @click="updateState(props.entity.entity_id, entityState)"
+  >
+    <template #content>
+      <div class="flex items-center">
         <div
-          class="mdi-icons header-icon flex justify-center content-center"
-          :class="
-            getClass(rootStore.entities?.[props.entity.entity_id]?.state, props.entity.entity_id)
-          "
+          class="mdi-icons card-icon flex justify-center content-center"
+          :class="getClass(entityState, props.entity.entity_id)"
         >
           <svg style="position: absolute; width: 0; height: 0">
             <defs>
@@ -16,20 +19,9 @@
               </linearGradient>
             </defs>
           </svg>
-          <svg-icon
-            type="mdi"
-            :path="
-              getIcon(rootStore.entities?.[props.entity.entity_id]?.state, props.entity.entity_id)
-            "
-            @click="
-              updateState(
-                rootStore.entities?.[props.entity.entity_id]?.state,
-                props.entity.entity_id,
-              )
-            "
-          ></svg-icon>
+          <svg-icon type="mdi" :path="getIcon(entityState, props.entity.entity_id)"></svg-icon>
         </div>
-        <span class="header-title">
+        <span class="card-title">
           {{ props.entity.name ?? props.entity.original_name }}
         </span>
       </div>
@@ -38,9 +30,10 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { computed } from 'vue'
 import { useRootStore } from '@/stores/root'
 import Card from '@/volt/Card.vue'
+// @ts-ignore
 import SvgIcon from '@jamescoyle/vue-icon'
 import {
   mdiLedStripVariant,
@@ -60,9 +53,11 @@ const props = defineProps<{
   }
 }>()
 
-console.log(props.entity)
+const entityState = computed(() => {
+  return rootStore.entities?.[props.entity.entity_id]?.state
+})
 
-const updateState = async (value: string, entityId: string) => {
+const updateState = async (entityId: string, value: string | undefined) => {
   await rootStore.updateState(entityId, value)
 }
 
@@ -90,7 +85,6 @@ const getClass = (state: string | undefined, entityId: string) => {
 }
 
 const getIcon = (state: string | undefined, entityId: string) => {
-  console.log(entityId.split('.')[0])
   switch (entityId.split('.')[0]) {
     case 'light':
       if (entityId === 'light.sony_led') {

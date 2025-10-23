@@ -59,7 +59,7 @@ export const useRootStore = defineStore('root', () => {
     }
   }
 
-  const createDatastructure = async (deviceList: any[], entityList: any[]): Promise<any[]> => {
+  const createDatastructure = async (deviceList: any[], entityList: any[]) => {
     try {
       const filteredDevices = deviceList.filter((device) => device.area_id)
 
@@ -85,26 +85,26 @@ export const useRootStore = defineStore('root', () => {
     }
   }
 
-  const updateState = async (entityId: string, state: string): Promise<void> => {
+  const updateState = async (entityId: string | undefined, state: string | undefined): Promise<void> => {
     if (!connection.value && useLocalData.value === false) {
       console.error('No active connection to Home Assistant')
       return
     }
-    if (useLocalData.value) {
+    if (useLocalData.value && entityId && entities.value && entities.value[entityId]) {
       entities.value[entityId].state = state === 'on' ? 'off' : 'on'
       return
     }
 
     try {
       // Extract the domain from the entity_id (e.g., "light" from "light.living_room")
-      const domain = entityId.split('.')[0]
+      const domain = entityId?.split('.')[0]
       const service = state ? 'turn_on' : 'turn_off'
+      if (connection.value && domain) {
+        await callService(connection.value, domain, service, {
+          entity_id: entityId,
+        })
+      }
 
-      await callService(connection.value, domain, service, {
-        entity_id: entityId,
-      })
-
-      console.log(`Successfully called ${domain}.${service} for ${entityId}`)
     } catch (error) {
       console.error('Failed to update state:', error)
       throw error
