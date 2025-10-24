@@ -292,133 +292,133 @@
       "editable": true,
       "id": "ryan_gilligan",
       "device_trackers": ["device_tracker.pixel_9_pro_xl"],
-      "latitude": 38.847866,
-      "longitude": -77.4443586,
-      "gps_accuracy": 29,
+      "latitude": 38.8478912,
+      "longitude": -77.4443894,
+      "gps_accuracy": 100,
       "source": "device_tracker.pixel_9_pro_xl",
       "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2",
       "friendly_name": "Ryan Gilligan"
     },
     "context": {
-      "id": "01K85WXG0J9ECSYSCSQA5HHQEB",
+      "id": "01K89MHF2CTHJ6JVK32786TXH5",
       "parent_id": null,
       "user_id": null
     },
     "last_changed": "2025-10-21T03:27:26.066Z",
-    "last_updated": "2025-10-22T12:04:50.322Z"
+    "last_updated": "2025-10-23T22:55:25.260Z"
   },
   "sun.sun": {
     "entity_id": "sun.sun",
-    "state": "above_horizon",
+    "state": "below_horizon",
     "attributes": {
-      "next_dawn": "2025-10-23T11:00:09.465227+00:00",
-      "next_dusk": "2025-10-22T22:48:33.663976+00:00",
-      "next_midnight": "2025-10-23T04:54:00+00:00",
-      "next_noon": "2025-10-22T16:54:14+00:00",
-      "next_rising": "2025-10-23T11:27:51.038118+00:00",
-      "next_setting": "2025-10-22T22:20:56.719136+00:00",
-      "elevation": 15.56,
-      "azimuth": 118.91,
-      "rising": true,
+      "next_dawn": "2025-10-24T11:01:09.344230+00:00",
+      "next_dusk": "2025-10-24T22:46:02.578487+00:00",
+      "next_midnight": "2025-10-24T04:53:52+00:00",
+      "next_noon": "2025-10-24T16:53:57+00:00",
+      "next_rising": "2025-10-24T11:28:53.779625+00:00",
+      "next_setting": "2025-10-24T22:18:19.896781+00:00",
+      "elevation": -16.67,
+      "azimuth": 268.18,
+      "rising": false,
       "friendly_name": "Sun"
     },
     "context": {
-      "id": "01K85ZWRDJX88P13WKFY54TH5D",
+      "id": "01K89Q769AWS7VCTRE96W0S4YW",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T11:25:09.859Z",
-    "last_updated": "2025-10-22T12:56:51.890Z"
+    "last_changed": "2025-10-23T22:21:37.767Z",
+    "last_updated": "2025-10-23T23:42:14.314Z"
   },
   "sensor.sun_next_dawn": {
     "entity_id": "sensor.sun_next_dawn",
-    "state": "2025-10-23T11:00:09+00:00",
+    "state": "2025-10-24T11:01:09+00:00",
     "attributes": {
       "device_class": "timestamp",
       "friendly_name": "Sun Next dawn"
     },
     "context": {
-      "id": "01K85S57WBNG39T8MN26SY9EYB",
+      "id": "01K88BKS3WNPD8DHXT9BR08N9P",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T10:59:09.835Z",
-    "last_updated": "2025-10-22T10:59:09.835Z"
+    "last_changed": "2025-10-23T11:00:09.468Z",
+    "last_updated": "2025-10-23T11:00:09.468Z"
   },
   "sensor.sun_next_dusk": {
     "entity_id": "sensor.sun_next_dusk",
-    "state": "2025-10-22T22:48:33+00:00",
+    "state": "2025-10-24T22:46:02+00:00",
     "attributes": {
       "device_class": "timestamp",
       "friendly_name": "Sun Next dusk"
     },
     "context": {
-      "id": "01K84FDTK05EW0KW5271TQVZ00",
+      "id": "01K89M2JRYPECQS3206QKQZYY7",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-21T22:49:50.944Z",
-    "last_updated": "2025-10-21T22:49:50.944Z"
+    "last_changed": "2025-10-23T22:47:17.534Z",
+    "last_updated": "2025-10-23T22:47:17.534Z"
   },
   "sensor.sun_next_midnight": {
     "entity_id": "sensor.sun_next_midnight",
-    "state": "2025-10-23T04:54:00+00:00",
+    "state": "2025-10-24T04:53:52+00:00",
     "attributes": {
       "device_class": "timestamp",
       "friendly_name": "Sun Next midnight"
     },
     "context": {
-      "id": "01K8548VC40TDE7KB1V3M03KSZ",
+      "id": "01K87PNAJ16T1768FJDNYFK85M",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T04:54:08.004Z",
-    "last_updated": "2025-10-22T04:54:08.004Z"
+    "last_changed": "2025-10-23T04:54:00.001Z",
+    "last_updated": "2025-10-23T04:54:00.001Z"
   },
   "sensor.sun_next_noon": {
     "entity_id": "sensor.sun_next_noon",
-    "state": "2025-10-22T16:54:14+00:00",
+    "state": "2025-10-24T16:53:57+00:00",
     "attributes": {
       "device_class": "timestamp",
       "friendly_name": "Sun Next noon"
     },
     "context": {
-      "id": "01K83V2ZG2539H7NXFW16KR7SE",
+      "id": "01K88ZVVXJ1RDZ23Z2CSB1J01D",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-21T16:54:24.002Z",
-    "last_updated": "2025-10-21T16:54:24.002Z"
+    "last_changed": "2025-10-23T16:54:06.002Z",
+    "last_updated": "2025-10-23T16:54:06.002Z"
   },
   "sensor.sun_next_rising": {
     "entity_id": "sensor.sun_next_rising",
-    "state": "2025-10-23T11:27:51+00:00",
+    "state": "2025-10-24T11:28:53+00:00",
     "attributes": {
       "device_class": "timestamp",
       "friendly_name": "Sun Next rising"
     },
     "context": {
-      "id": "01K85TQVSZ2XS8R6B9CQSBHCSQ",
+      "id": "01K88D6FQZQ0SKD3ADCCWH3737",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T11:26:48.639Z",
-    "last_updated": "2025-10-22T11:26:48.639Z"
+    "last_changed": "2025-10-23T11:27:51.039Z",
+    "last_updated": "2025-10-23T11:27:51.039Z"
   },
   "sensor.sun_next_setting": {
     "entity_id": "sensor.sun_next_setting",
-    "state": "2025-10-22T22:20:56+00:00",
+    "state": "2025-10-24T22:18:19+00:00",
     "attributes": {
       "device_class": "timestamp",
       "friendly_name": "Sun Next setting"
     },
     "context": {
-      "id": "01K84DVB4SA9621H646EM1V89H",
+      "id": "01K89JFXX6ZBYV0WPWZPZTJZNY",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-21T22:22:16.729Z",
-    "last_updated": "2025-10-21T22:22:16.729Z"
+    "last_changed": "2025-10-23T22:19:37.766Z",
+    "last_updated": "2025-10-23T22:19:37.766Z"
   },
   "govee.state": {
     "entity_id": "govee.state",
@@ -437,58 +437,58 @@
     "state": "on",
     "attributes": {
       "id": "1760662652211",
-      "last_triggered": "2025-10-22T10:30:00.330629+00:00",
+      "last_triggered": "2025-10-23T10:30:00.329859+00:00",
       "mode": "single",
       "current": 0,
       "friendly_name": "Turn off Fan"
     },
     "context": {
-      "id": "01K85QFVCAAF1WVMXN87NK3T2H",
+      "id": "01K889WJC9J571MYJ6ESDAJVWT",
       "parent_id": null,
       "user_id": null
     },
     "last_changed": "2025-10-21T03:27:28.311Z",
-    "last_updated": "2025-10-22T10:30:00.406Z"
+    "last_updated": "2025-10-23T10:30:00.406Z"
   },
   "device_tracker.pixel_9_pro_xl": {
     "entity_id": "device_tracker.pixel_9_pro_xl",
     "state": "home",
     "attributes": {
       "source_type": "gps",
-      "latitude": 38.847866,
-      "longitude": -77.4443586,
-      "gps_accuracy": 29,
-      "altitude": 47,
+      "latitude": 38.8478912,
+      "longitude": -77.4443894,
+      "gps_accuracy": 100,
+      "altitude": 40,
       "course": 0,
       "speed": 0,
-      "vertical_accuracy": 0,
+      "vertical_accuracy": 100,
       "friendly_name": "Pixel 9 Pro XL"
     },
     "context": {
-      "id": "01K85WXG0J4CW8KAXB3RF3QX0P",
+      "id": "01K89QADB8HD669ZY8WTE7XQJ7",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T12:04:50.322Z",
-    "last_updated": "2025-10-22T12:04:50.322Z"
+    "last_changed": "2025-10-23T23:43:59.848Z",
+    "last_updated": "2025-10-23T23:43:59.848Z"
   },
   "sensor.pixel_9_pro_xl_battery_level": {
     "entity_id": "sensor.pixel_9_pro_xl_battery_level",
-    "state": "100",
+    "state": "47",
     "attributes": {
       "state_class": "measurement",
       "unit_of_measurement": "%",
       "device_class": "battery",
-      "icon": "mdi:battery",
+      "icon": "mdi:battery-40",
       "friendly_name": "Pixel 9 Pro XL Battery level"
     },
     "context": {
-      "id": "01K85SD7RVRC4BB6872W49428F",
+      "id": "01K89QADGK9GH12K2AD1FB496P",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T09:57:14.870Z",
-    "last_updated": "2025-10-22T11:03:31.867Z"
+    "last_changed": "2025-10-23T23:44:00.019Z",
+    "last_updated": "2025-10-23T23:44:00.019Z"
   },
   "sensor.pixel_9_pro_xl_battery_state": {
     "entity_id": "sensor.pixel_9_pro_xl_battery_state",
@@ -500,12 +500,12 @@
       "friendly_name": "Pixel 9 Pro XL Battery state"
     },
     "context": {
-      "id": "01K85SD7RVRKAX56FACS7XNYE9",
+      "id": "01K88CCK7F9DDA6T35YKC8Y2EZ",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T11:03:31.867Z",
-    "last_updated": "2025-10-22T11:03:31.867Z"
+    "last_changed": "2025-10-23T11:13:42.639Z",
+    "last_updated": "2025-10-23T11:13:42.639Z"
   },
   "sensor.pixel_9_pro_xl_charger_type": {
     "entity_id": "sensor.pixel_9_pro_xl_charger_type",
@@ -517,12 +517,12 @@
       "friendly_name": "Pixel 9 Pro XL Charger type"
     },
     "context": {
-      "id": "01K85SD7RVKME7RC50RSNWZW7Y",
+      "id": "01K88CCK7F405NXE58K5XBSA98",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T11:03:31.867Z",
-    "last_updated": "2025-10-22T11:03:31.867Z"
+    "last_changed": "2025-10-23T11:13:42.639Z",
+    "last_updated": "2025-10-23T11:13:42.639Z"
   },
   "update.hacs_update": {
     "entity_id": "update.hacs_update",
@@ -580,36 +580,36 @@
     "entity_id": "script.watch_tv",
     "state": "off",
     "attributes": {
-      "last_triggered": "2025-10-20T03:47:21.830587+00:00",
+      "last_triggered": "2025-10-23T03:39:42.920124+00:00",
       "mode": "single",
       "current": 0,
       "friendly_name": "Watch TV"
     },
     "context": {
-      "id": "01K82CXEKRBAJPZ48PVFAX39TK",
+      "id": "01K87JD9Y82NB3S65TGPA24Q71",
       "parent_id": null,
-      "user_id": null
+      "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
     },
-    "last_changed": "2025-10-21T03:27:28.376Z",
-    "last_updated": "2025-10-21T03:27:28.376Z"
+    "last_changed": "2025-10-23T03:39:45.963Z",
+    "last_updated": "2025-10-23T03:39:45.963Z"
   },
   "script.toggle_bedroom_ceiling_fan": {
     "entity_id": "script.toggle_bedroom_ceiling_fan",
     "state": "off",
     "attributes": {
-      "last_triggered": "2025-10-22T04:43:02.945877+00:00",
+      "last_triggered": "2025-10-23T03:39:51.326804+00:00",
       "mode": "single",
       "current": 0,
       "icon": "mdi:fan",
       "friendly_name": "Toggle Bedroom Ceiling Fan"
     },
     "context": {
-      "id": "01K853MHX1N2V547ZPPVHZZ17P",
+      "id": "01K87JDJ4YGVH8416HW870T1RR",
       "parent_id": null,
       "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
     },
-    "last_changed": "2025-10-22T04:43:03.091Z",
-    "last_updated": "2025-10-22T04:43:03.091Z"
+    "last_changed": "2025-10-23T03:39:51.487Z",
+    "last_updated": "2025-10-23T03:39:51.487Z"
   },
   "todo.shopping_list": {
     "entity_id": "todo.shopping_list",
@@ -657,8 +657,8 @@
       "rgb_color": null,
       "xy_color": null,
       "rate_limit_total": 100,
-      "rate_limit_remaining": -12003,
-      "rate_limit_reset_seconds": -1761137906.5,
+      "rate_limit_remaining": -24552,
+      "rate_limit_reset_seconds": -1761263094.5,
       "rate_limit_reset": "1969-12-31T19:00:00",
       "rate_limit_on": 5,
       "manufacturer": "Govee",
@@ -667,70 +667,72 @@
       "supported_features": 0
     },
     "context": {
-      "id": "01K85ZZMSZH7T21FQBKRP9WXV9",
+      "id": "01K89QC2Q4XKY727YSNZ4FV49T",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-21T23:22:18.973Z",
-    "last_updated": "2025-10-22T12:58:26.495Z"
+    "last_changed": "2025-10-23T23:31:01.629Z",
+    "last_updated": "2025-10-23T23:44:54.500Z"
   },
   "binary_sensor.light_cloud_connection": {
     "entity_id": "binary_sensor.light_cloud_connection",
     "state": "on",
     "attributes": {
       "device_class": "connectivity",
-      "friendly_name": "Light Cloud connection"
+      "friendly_name": "TV Room Light Cloud connection"
     },
     "context": {
-      "id": "01K82CXEVFZJCT66AKWDYE59KP",
+      "id": "01K89NEJRH1X72ZZHBM4KAJ4VK",
       "parent_id": null,
       "user_id": null
     },
     "last_changed": "2025-10-21T03:27:28.623Z",
-    "last_updated": "2025-10-21T03:27:28.623Z"
+    "last_updated": "2025-10-23T23:11:19.313Z"
   },
   "switch.light": {
     "entity_id": "switch.light",
     "state": "on",
     "attributes": {
-      "friendly_name": "Light"
+      "device_class": "outlet",
+      "icon": "mdi:power-socket-us",
+      "friendly_name": "TV Room Light"
     },
     "context": {
-      "id": "01K85V2MAZ72QEY8PFMD8CKPE5",
+      "id": "01K89PJACANZ7S0E0DDADFM205",
       "parent_id": null,
-      "user_id": null
+      "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
     },
-    "last_changed": "2025-10-22T11:32:41.439Z",
-    "last_updated": "2025-10-22T11:32:41.439Z"
+    "last_changed": "2025-10-23T23:30:50.784Z",
+    "last_updated": "2025-10-23T23:30:50.784Z"
   },
   "switch.light_led": {
     "entity_id": "switch.light_led",
     "state": "on",
     "attributes": {
-      "friendly_name": "Light LED"
+      "friendly_name": "TV Room Light LED"
     },
     "context": {
-      "id": "01K82CXEVH69C1N1GNRS2EMS1C",
+      "id": "01K89NTW224Q5REBDKZPVMW94E",
       "parent_id": null,
-      "user_id": null
+      "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
     },
-    "last_changed": "2025-10-21T03:27:28.625Z",
-    "last_updated": "2025-10-21T03:27:28.625Z"
+    "last_changed": "2025-10-23T23:18:03.508Z",
+    "last_updated": "2025-10-23T23:18:03.508Z"
   },
   "weather.forecast_home": {
     "entity_id": "weather.forecast_home",
-    "state": "sunny",
+    "state": "clear-night",
     "attributes": {
-      "temperature": 49,
-      "dew_point": 45,
+      "temperature": 53,
+      "dew_point": 35,
       "temperature_unit": "°F",
-      "humidity": 85,
-      "cloud_coverage": 1.6,
-      "uv_index": 0.1,
-      "pressure": 29.85,
+      "humidity": 49,
+      "cloud_coverage": 0.8,
+      "uv_index": 0,
+      "pressure": 30.02,
       "pressure_unit": "inHg",
-      "wind_bearing": 260.9,
-      "wind_speed": 6.96,
+      "wind_bearing": 326.6,
+      "wind_speed": 7.83,
       "wind_speed_unit": "mph",
       "visibility_unit": "mi",
       "precipitation_unit": "in",
@@ -739,12 +741,12 @@
       "supported_features": 3
     },
     "context": {
-      "id": "01K85XRBRWSEJMCRWF6B2N5G1V",
+      "id": "01K89N7KHKZWSJP2H6M6MQS42B",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T12:19:30.716Z",
-    "last_updated": "2025-10-22T12:19:30.716Z"
+    "last_changed": "2025-10-23T22:09:30.947Z",
+    "last_updated": "2025-10-23T23:07:30.739Z"
   },
   "binary_sensor.ceiling_fan_cloud_connection": {
     "entity_id": "binary_sensor.ceiling_fan_cloud_connection",
@@ -803,12 +805,12 @@
       "supported_features": 49
     },
     "context": {
-      "id": "01K85QFVCAAF1WVMXN87NK3T2H",
+      "id": "01K89N0A00G26AGF44W3DK8T40",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T10:30:00.587Z",
-    "last_updated": "2025-10-22T10:30:00.587Z"
+    "last_changed": "2025-10-23T23:03:31.584Z",
+    "last_updated": "2025-10-23T23:03:31.584Z"
   },
   "light.ceiling_fan_dimmer_switch": {
     "entity_id": "light.ceiling_fan_dimmer_switch",
@@ -821,12 +823,12 @@
       "supported_features": 32
     },
     "context": {
-      "id": "01K84GRV1ZWAA6KQAH5A72M8Y9",
+      "id": "01K89N0A01NDNB8DFJTJAFKC02",
       "parent_id": null,
-      "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
+      "user_id": null
     },
-    "last_changed": "2025-10-21T23:13:20.869Z",
-    "last_updated": "2025-10-21T23:13:20.869Z"
+    "last_changed": "2025-10-23T23:03:31.585Z",
+    "last_updated": "2025-10-23T23:03:31.585Z"
   },
   "number.ceiling_fan_smooth_on": {
     "entity_id": "number.ceiling_fan_smooth_on",
@@ -866,7 +868,7 @@
   },
   "select.ceiling_fan_light_preset": {
     "entity_id": "select.ceiling_fan_light_preset",
-    "state": "Light preset 5",
+    "state": "Light preset 1",
     "attributes": {
       "options": [
         "Not set",
@@ -879,27 +881,27 @@
       "friendly_name": "Bedroom Light preset"
     },
     "context": {
-      "id": "01K82CXEWHNS37P57X5YN8KB9C",
+      "id": "01K899FFV5C90CX2YHMW63MANF",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-21T03:27:28.657Z",
-    "last_updated": "2025-10-21T03:27:28.657Z"
+    "last_changed": "2025-10-23T19:42:06.181Z",
+    "last_updated": "2025-10-23T19:42:06.181Z"
   },
   "sensor.ceiling_fan_signal_level": {
     "entity_id": "sensor.ceiling_fan_signal_level",
-    "state": "2",
+    "state": "3",
     "attributes": {
       "state_class": "measurement",
       "friendly_name": "Bedroom Signal level"
     },
     "context": {
-      "id": "01K85Z6M4AVKN6FRDH5S7SEHAP",
+      "id": "01K89GPA0AZ3SB0W0SWJPXAEB4",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T12:44:46.602Z",
-    "last_updated": "2025-10-22T12:44:46.602Z"
+    "last_changed": "2025-10-23T21:48:09.610Z",
+    "last_updated": "2025-10-23T21:48:09.610Z"
   },
   "switch.ceiling_fan_auto_update_enabled": {
     "entity_id": "switch.ceiling_fan_auto_update_enabled",
@@ -945,33 +947,52 @@
   },
   "media_player.new_google_tv": {
     "entity_id": "media_player.new_google_tv",
-    "state": "off",
+    "state": "playing",
     "attributes": {
+      "volume_level": 1,
+      "is_volume_muted": false,
+      "media_content_id": "",
+      "media_content_type": "video",
+      "media_duration": 1461.292,
+      "media_position": 815.521,
+      "media_position_updated_at": "2025-10-23T23:43:59.277936+00:00",
+      "media_title": "Phineas and Ferb",
+      "app_id": "AndroidNativeApp",
+      "app_name": "Disney+",
+      "entity_picture_local": null,
       "friendly_name": "New Google TV",
-      "supported_features": 152449
+      "supported_features": 152451
     },
     "context": {
-      "id": "01K85XM2TRWFDPHDBKYKABKZ5R",
+      "id": "01K89QACSEMV2QQHCYF0WVAN04",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T12:17:10.488Z",
-    "last_updated": "2025-10-22T12:17:10.488Z"
+    "last_changed": "2025-10-23T23:30:23.811Z",
+    "last_updated": "2025-10-23T23:43:59.278Z"
   },
   "media_player.google_tv": {
     "entity_id": "media_player.google_tv",
-    "state": "off",
+    "state": "idle",
     "attributes": {
+      "volume_level": 0.5199999809265137,
+      "is_volume_muted": false,
+      "media_content_type": "video",
+      "media_position": 0,
+      "media_position_updated_at": "2025-10-23T23:43:59.244628+00:00",
+      "app_id": "AndroidNativeApp",
+      "app_name": "Disney+",
+      "entity_picture_local": null,
       "friendly_name": "Google TV",
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85FYHXTJZPERXXGPTGA4186",
+      "id": "01K89QACRC59TVJGAT691B9HXF",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T08:18:13.562Z",
-    "last_updated": "2025-10-22T08:18:13.562Z"
+    "last_changed": "2025-10-23T11:32:03.884Z",
+    "last_updated": "2025-10-23T23:43:59.244Z"
   },
   "media_player.bedroom_speaker": {
     "entity_id": "media_player.bedroom_speaker",
@@ -982,12 +1003,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85WQM1F6EQERTV2FWAHCDEP",
+      "id": "01K88E82624X41MGR8VPM502AM",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T12:01:37.839Z",
-    "last_updated": "2025-10-22T12:01:37.839Z"
+    "last_changed": "2025-10-23T11:46:11.266Z",
+    "last_updated": "2025-10-23T11:46:11.266Z"
   },
   "media_player.dining_room_speaker": {
     "entity_id": "media_player.dining_room_speaker",
@@ -998,12 +1019,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85A6682ZSCW3X0R2CWH8RWJ",
+      "id": "01K87WB99S25W9AHCNF3JT5S91",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T06:37:32.290Z",
-    "last_updated": "2025-10-22T06:37:32.290Z"
+    "last_changed": "2025-10-23T06:33:22.489Z",
+    "last_updated": "2025-10-23T06:33:22.489Z"
   },
   "select.basement_tv_activities": {
     "entity_id": "select.basement_tv_activities",
@@ -1013,12 +1034,12 @@
       "friendly_name": "Sony TV Activites"
     },
     "context": {
-      "id": "01K84HAT1XYKW740S30F4CWCBK",
+      "id": "01K87JDD0JQY8YDR51B1CEJYQQ",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-21T23:23:09.245Z",
-    "last_updated": "2025-10-21T23:23:09.245Z"
+    "last_changed": "2025-10-23T03:39:46.066Z",
+    "last_updated": "2025-10-23T03:39:46.066Z"
   },
   "remote.basement_tv": {
     "entity_id": "remote.basement_tv",
@@ -1033,12 +1054,12 @@
       "supported_features": 4
     },
     "context": {
-      "id": "01K84HAQ777FSHAZ1339DXWM7H",
+      "id": "01K87JD9Y82NB3S65TGPA24Q71",
       "parent_id": null,
       "user_id": "e323b0bc2e1e40dfa4b316dff3f430a2"
     },
-    "last_changed": "2025-10-21T23:23:09.245Z",
-    "last_updated": "2025-10-21T23:23:09.284Z"
+    "last_changed": "2025-10-23T03:39:46.066Z",
+    "last_updated": "2025-10-23T03:39:46.096Z"
   },
   "media_player.all_speakers": {
     "entity_id": "media_player.all_speakers",
@@ -1049,12 +1070,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85A6AHZNEQTG29HF2YS29E2",
+      "id": "01K87WBB1C358RJ5SGR00QDV8K",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T06:37:36.703Z",
-    "last_updated": "2025-10-22T06:37:36.703Z"
+    "last_changed": "2025-10-23T06:33:24.268Z",
+    "last_updated": "2025-10-23T06:33:24.268Z"
   },
   "media_player.upstairs": {
     "entity_id": "media_player.upstairs",
@@ -1065,12 +1086,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85A6CX0ME42G7Y53CDVS62E",
+      "id": "01K87WBAYWZSD9JK2KJM7D5X3P",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T06:37:39.104Z",
-    "last_updated": "2025-10-22T06:37:39.104Z"
+    "last_changed": "2025-10-23T06:33:24.188Z",
+    "last_updated": "2025-10-23T06:33:24.188Z"
   },
   "media_player.sony_tv": {
     "entity_id": "media_player.sony_tv",
@@ -1080,12 +1101,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85N7SVVNCD3DTH9Q0ZZ05RP",
+      "id": "01K8853XR20S1MBB1N53ZAJWX2",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T09:50:39.483Z",
-    "last_updated": "2025-10-22T09:50:39.483Z"
+    "last_changed": "2025-10-23T09:06:38.466Z",
+    "last_updated": "2025-10-23T09:06:38.466Z"
   },
   "media_player.shiwbeieheuveheheehh": {
     "entity_id": "media_player.shiwbeieheuveheheehh",
@@ -1095,12 +1116,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K85GCGMW91BEFP43N96XSW31",
+      "id": "01K87ZJGHDCX13HCKEDX68Y7DD",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T08:25:51.004Z",
-    "last_updated": "2025-10-22T08:25:51.004Z"
+    "last_changed": "2025-10-23T07:29:45.005Z",
+    "last_updated": "2025-10-23T07:29:45.005Z"
   },
   "media_player.lg_webos_tv_oled48b5pua": {
     "entity_id": "media_player.lg_webos_tv_oled48b5pua",
@@ -1110,12 +1131,12 @@
       "supported_features": 152461
     },
     "context": {
-      "id": "01K84XRQZW5XMNFXFXWMTDS1Q8",
+      "id": "01K88DF15B1S6AV5JWN20YC17Y",
       "parent_id": null,
       "user_id": null
     },
-    "last_changed": "2025-10-22T03:00:28.796Z",
-    "last_updated": "2025-10-22T03:00:28.796Z"
+    "last_changed": "2025-10-23T11:32:31.019Z",
+    "last_updated": "2025-10-23T11:32:31.019Z"
   },
   "update.govee_lights_bluetooth_update": {
     "entity_id": "update.govee_lights_bluetooth_update",
@@ -1132,5 +1153,67 @@
     },
     "last_changed": "2025-10-21T03:27:32.774Z",
     "last_updated": "2025-10-21T03:27:32.774Z"
+  },
+  "climate.living_room_thermostat": {
+    "entity_id": "climate.living_room_thermostat",
+    "state": "heat_cool",
+    "attributes": {
+      "hvac_modes": ["heat", "cool", "heat_cool", "off"],
+      "min_temp": 50,
+      "max_temp": 90,
+      "fan_modes": ["on", "off"],
+      "preset_modes": ["none", "eco"],
+      "current_temperature": 70,
+      "temperature": null,
+      "target_temp_high": 70,
+      "target_temp_low": 67,
+      "current_humidity": 49,
+      "fan_mode": "off",
+      "hvac_action": "idle",
+      "preset_mode": "none",
+      "friendly_name": "Nest Thermostat",
+      "supported_features": 411
+    },
+    "context": {
+      "id": "01K89Q5GZRGEEDGCPXKM5GZ88M",
+      "parent_id": null,
+      "user_id": null
+    },
+    "last_changed": "2025-10-23T23:40:40.604Z",
+    "last_updated": "2025-10-23T23:41:19.736Z"
+  },
+  "sensor.living_room_thermostat_temperature": {
+    "entity_id": "sensor.living_room_thermostat_temperature",
+    "state": "69.62",
+    "attributes": {
+      "state_class": "measurement",
+      "unit_of_measurement": "°F",
+      "device_class": "temperature",
+      "friendly_name": "Nest Thermostat Temperature"
+    },
+    "context": {
+      "id": "01K89Q5GZRW9F1RW8HN23YT73P",
+      "parent_id": null,
+      "user_id": null
+    },
+    "last_changed": "2025-10-23T23:40:40.605Z",
+    "last_updated": "2025-10-23T23:41:19.736Z"
+  },
+  "sensor.living_room_thermostat_humidity": {
+    "entity_id": "sensor.living_room_thermostat_humidity",
+    "state": "49",
+    "attributes": {
+      "state_class": "measurement",
+      "unit_of_measurement": "%",
+      "device_class": "humidity",
+      "friendly_name": "Nest Thermostat Humidity"
+    },
+    "context": {
+      "id": "01K89Q5GZR8H227VH3RRG9GX9M",
+      "parent_id": null,
+      "user_id": null
+    },
+    "last_changed": "2025-10-23T23:40:40.605Z",
+    "last_updated": "2025-10-23T23:41:19.736Z"
   }
 }

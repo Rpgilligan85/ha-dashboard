@@ -22,37 +22,18 @@ defineProps<Props>()
 
 const theme = ref<CardPassThroughOptions>({
   root: `flex flex-col rounded-xl
-        bg-surface-0
-        text-surface-700 dark:text-surface-0
-        shadow-md my-3 cursor-pointer`,
+        overflow-hidden
+        transition-all duration-300
+        shadow-sm hover:shadow-md`,
   header: ``,
-  body: ``,
+  body: `p-0`,
   caption: `flex flex-col gap-2`,
   title: `font-medium text-xl`,
   subtitle: `text-surface-500 dark:text-surface-400`,
-  content: `card-content`,
+  content: ``,
   footer: ``,
 })
 </script>
-<style lang="scss">
-.card-content {
-  padding: 7px;
-
-  .card-icon {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    margin-right: 10px;
-    svg {
-      align-self: center;
-      justify-content: center;
-      display: flex;
-    }
-  }
-
-  .card-title {
-    line-height: 28px;
-  }
-}
+<style scoped>
+/* Card styles are now handled by component-specific CSS */
 </style>

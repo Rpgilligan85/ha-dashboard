@@ -737,7 +737,7 @@
     "icon": null,
     "id": "59eee43b18546d7f0b3ba1f84464b0a7",
     "labels": [],
-    "modified_at": 1761135430.488811,
+    "modified_at": 1761256050.56352,
     "name": null,
     "options": {
       "conversation": {
@@ -764,7 +764,7 @@
     "icon": null,
     "id": "281b20053ea5409ab86c3972cf6f28a2",
     "labels": [],
-    "modified_at": 1761017249.528946,
+    "modified_at": 1761190773.479745,
     "name": "Shield",
     "options": {
       "conversation": {
@@ -926,7 +926,7 @@
     "icon": null,
     "id": "9735f294ee17ba0d8064f7c9b1abd8c8",
     "labels": [],
-    "modified_at": 1761096498.100705,
+    "modified_at": 1761219123.810817,
     "name": null,
     "options": {
       "conversation": {
@@ -1765,10 +1765,10 @@
     "entity_id": "switch.light",
     "has_entity_name": true,
     "hidden_by": null,
-    "icon": null,
+    "icon": "mdi:power-socket-us",
     "id": "cae8adbb3f61da29f84251415c7704a3",
-    "labels": [],
-    "modified_at": 1760662363.846265,
+    "labels": ["outlet"],
+    "modified_at": 1761261657.93064,
     "name": null,
     "options": {
       "conversation": {
@@ -5444,5 +5444,89 @@
     "platform": "tplink",
     "translation_key": "on_since",
     "unique_id": "803BF4F88B21F0D12DAF6568AB52BFDE2442B4DB01_on_since"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K89Q49GMJVM9CMZJS77KKD4A",
+    "config_subentry_id": null,
+    "created_at": 1761262840.603729,
+    "device_id": "5f07d20fc34ae1981f127aa8c8cefd6c",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "climate.living_room_thermostat",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "441e69e39167e045193b6c99f49c80c1",
+    "labels": [],
+    "modified_at": 1761262840.604481,
+    "name": null,
+    "options": {
+      "conversation": {
+        "should_expose": true
+      }
+    },
+    "original_name": null,
+    "platform": "nest",
+    "translation_key": null,
+    "unique_id": "enterprises/9e6a8604-5dac-42a2-9290-78d7d8fd8911/devices/AVPHwEs5YQ9xssEGfy59_78us9PeCNllxnY4LPpneYz6J9qzoiMuaxutkLVa1m8d0620Qe9tHcVCIecFFJbjdTGt_RLmaQ"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K89Q49GMJVM9CMZJS77KKD4A",
+    "config_subentry_id": null,
+    "created_at": 1761262840.605103,
+    "device_id": "5f07d20fc34ae1981f127aa8c8cefd6c",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.living_room_thermostat_temperature",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "081b4266e8d66c674bf23289bcca546b",
+    "labels": [],
+    "modified_at": 1761262840.605381,
+    "name": null,
+    "options": {
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": true
+      }
+    },
+    "original_name": "Temperature",
+    "platform": "nest",
+    "translation_key": null,
+    "unique_id": "enterprises/9e6a8604-5dac-42a2-9290-78d7d8fd8911/devices/AVPHwEs5YQ9xssEGfy59_78us9PeCNllxnY4LPpneYz6J9qzoiMuaxutkLVa1m8d0620Qe9tHcVCIecFFJbjdTGt_RLmaQ-temperature"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K89Q49GMJVM9CMZJS77KKD4A",
+    "config_subentry_id": null,
+    "created_at": 1761262840.605543,
+    "device_id": "5f07d20fc34ae1981f127aa8c8cefd6c",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.living_room_thermostat_humidity",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "0db07aaf7424f6a003a1b6d0492ebfc9",
+    "labels": [],
+    "modified_at": 1761262840.605719,
+    "name": null,
+    "options": {
+      "conversation": {
+        "should_expose": true
+      }
+    },
+    "original_name": "Humidity",
+    "platform": "nest",
+    "translation_key": null,
+    "unique_id": "enterprises/9e6a8604-5dac-42a2-9290-78d7d8fd8911/devices/AVPHwEs5YQ9xssEGfy59_78us9PeCNllxnY4LPpneYz6J9qzoiMuaxutkLVa1m8d0620Qe9tHcVCIecFFJbjdTGt_RLmaQ-humidity"
   }
 ]

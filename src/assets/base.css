@@ -47,7 +47,7 @@
   --p-text-hover-color: var(--p-surface-800);
   --p-text-muted-color: var(--p-surface-500);
   --p-text-hover-muted-color: var(--p-surface-600);
-  --p-card-background: var(p-surface-700);
+  --p-card-background: var(--p-surface-700);
   --p-card-color: var(--p-surface-0);
 }
 
@@ -73,7 +73,27 @@
   color-scheme: dark;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: var(--p-primary-1000);
-  color: var(--p-surface-50);
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--p-surface-50);
+  color: var(--p-text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.p-dark body {
+  background-color: var(--p-surface-900);
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
 }

@@ -469,93 +469,10 @@
     "primary_config_entry": "01K7QT923JJTPZ00ESXET8K1R3",
     "serial_number": null,
     "sw_version": "1.0.9 Build 241213 Rel.154621",
-    "via_device_id": null,
-    "entities": [
-      {
-        "area_id": null,
-        "categories": {},
-        "config_entry_id": "01K7QT923JJTPZ00ESXET8K1R3",
-        "config_subentry_id": null,
-        "created_at": 1760662161.99377,
-        "device_id": "2db22f3fbd8129d49b7ca6e7827c2eb6",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "fan.ceiling_fan_ceiling_fan",
-        "has_entity_name": true,
-        "hidden_by": null,
-        "icon": null,
-        "id": "6e9a9c9a48dee43181b1296f419c022e",
-        "labels": [],
-        "modified_at": 1760662250.390666,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": true
-          }
-        },
-        "original_name": "Ceiling Fan",
-        "platform": "tplink",
-        "translation_key": null,
-        "unique_id": "803BF4F88B21F0D12DAF6568AB52BFDE2442B4DB00"
-      },
-      {
-        "area_id": null,
-        "categories": {},
-        "config_entry_id": "01K7QT923JJTPZ00ESXET8K1R3",
-        "config_subentry_id": null,
-        "created_at": 1760662161.994456,
-        "device_id": "2db22f3fbd8129d49b7ca6e7827c2eb6",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "light.ceiling_fan_dimmer_switch",
-        "has_entity_name": true,
-        "hidden_by": null,
-        "icon": null,
-        "id": "4ce220fd21ae1215aee2e7978e7937cb",
-        "labels": [],
-        "modified_at": 1760662250.391384,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": true
-          }
-        },
-        "original_name": "Dimmer Switch",
-        "platform": "tplink",
-        "translation_key": null,
-        "unique_id": "803BF4F88B21F0D12DAF6568AB52BFDE2442B4DB01"
-      },
-      {
-        "area_id": null,
-        "categories": {},
-        "config_entry_id": "01K7QT923JJTPZ00ESXET8K1R3",
-        "config_subentry_id": null,
-        "created_at": 1760662161.995937,
-        "device_id": "2db22f3fbd8129d49b7ca6e7827c2eb6",
-        "disabled_by": null,
-        "entity_category": "config",
-        "entity_id": "select.ceiling_fan_light_preset",
-        "has_entity_name": true,
-        "hidden_by": null,
-        "icon": null,
-        "id": "74a7d1bb1f38787ea3b307cb7bcd9103",
-        "labels": [],
-        "modified_at": 1760662250.39237,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_name": "Light preset",
-        "platform": "tplink",
-        "translation_key": "light_preset",
-        "unique_id": "803BF4F88B21F0D12DAF6568AB52BFDE2442B4DB01_light_preset"
-      }
-    ]
+    "via_device_id": null
   },
   {
-    "area_id": null,
+    "area_id": "tv_room",
     "configuration_url": null,
     "config_entries": ["01K7QTF7MCPNMS1DQJ8S5Z5A35"],
     "config_entries_subentries": {
@@ -572,8 +489,8 @@
     "manufacturer": "TP-Link",
     "model": "HS100",
     "model_id": null,
-    "modified_at": 1760662363.840324,
-    "name_by_user": null,
+    "modified_at": 1761261079.312906,
+    "name_by_user": "TV Room Light",
     "name": "Light",
     "primary_config_entry": "01K7QTF7MCPNMS1DQJ8S5Z5A35",
     "serial_number": null,
@@ -604,63 +521,7 @@
     "primary_config_entry": "01K7QTGZB5E263Z71355EKRNM4",
     "serial_number": null,
     "sw_version": "4.15.330",
-    "via_device_id": null,
-    "entities": [
-      {
-        "area_id": null,
-        "categories": {},
-        "config_entry_id": "01K7QTGZB5E263Z71355EKRNM4",
-        "config_subentry_id": null,
-        "created_at": 1760662422.132147,
-        "device_id": "c85e8b31bf0741cfd2f4d5b86ab77d40",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "remote.basement_tv",
-        "has_entity_name": true,
-        "hidden_by": null,
-        "icon": null,
-        "id": "f3f65f608b17260bbfcf80475211e5b8",
-        "labels": [],
-        "modified_at": 1761078685.159973,
-        "name": "Sony TV",
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_name": null,
-        "platform": "harmony",
-        "translation_key": null,
-        "unique_id": "16424684"
-      },
-      {
-        "area_id": null,
-        "categories": {},
-        "config_entry_id": "01K7QTGZB5E263Z71355EKRNM4",
-        "config_subentry_id": null,
-        "created_at": 1760662422.132963,
-        "device_id": "c85e8b31bf0741cfd2f4d5b86ab77d40",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "select.basement_tv_activities",
-        "has_entity_name": true,
-        "hidden_by": null,
-        "icon": null,
-        "id": "25c4f5d91ec6f868f9ee7ea526b3531d",
-        "labels": [],
-        "modified_at": 1761078696.822821,
-        "name": "Sony TV Activites",
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_name": "Activities",
-        "platform": "harmony",
-        "translation_key": "activities",
-        "unique_id": "16424684"
-      }
-    ]
+    "via_device_id": null
   },
   {
     "area_id": null,
@@ -740,8 +601,7 @@
     "primary_config_entry": "01K7R5QVKAK2DWQJ40RK6MYF7P",
     "serial_number": null,
     "sw_version": "2.0.5",
-    "via_device_id": null,
-    "entities": []
+    "via_device_id": null
   },
   {
     "area_id": null,
@@ -819,36 +679,7 @@
     "primary_config_entry": "01K7R6HHPM21M76N5JQ41CE344",
     "serial_number": null,
     "sw_version": null,
-    "via_device_id": null,
-    "entities": [
-      {
-        "area_id": null,
-        "categories": {},
-        "config_entry_id": "01K7R6HHPM21M76N5JQ41CE344",
-        "config_subentry_id": null,
-        "created_at": 1760675022.653026,
-        "device_id": "6626b9b29092cb8d4b2d6ce236fcd1f8",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "light.sony_led",
-        "has_entity_name": false,
-        "hidden_by": null,
-        "icon": null,
-        "id": "40552f7555dd2d4f37d95774828f8949",
-        "labels": [],
-        "modified_at": 1760675022.653491,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": true
-          }
-        },
-        "original_name": "Sony LED",
-        "platform": "govee",
-        "translation_key": null,
-        "unique_id": "govee_govee_CD:67:C3:33:34:36:39:96"
-      }
-    ]
+    "via_device_id": null
   },
   {
     "area_id": null,
@@ -874,6 +705,37 @@
     "primary_config_entry": "01K7QD8Q3R9VSJVKXQW7NGB0XV",
     "serial_number": null,
     "sw_version": "5.8.0",
+    "via_device_id": null
+  },
+  {
+    "area_id": "living_room",
+    "configuration_url": null,
+    "config_entries": ["01K89Q49GMJVM9CMZJS77KKD4A"],
+    "config_entries_subentries": {
+      "01K89Q49GMJVM9CMZJS77KKD4A": [null]
+    },
+    "connections": [],
+    "created_at": 1761262840.603273,
+    "disabled_by": null,
+    "entry_type": null,
+    "hw_version": null,
+    "id": "5f07d20fc34ae1981f127aa8c8cefd6c",
+    "identifiers": [
+      [
+        "nest",
+        "enterprises/9e6a8604-5dac-42a2-9290-78d7d8fd8911/devices/AVPHwEs5YQ9xssEGfy59_78us9PeCNllxnY4LPpneYz6J9qzoiMuaxutkLVa1m8d0620Qe9tHcVCIecFFJbjdTGt_RLmaQ"
+      ]
+    ],
+    "labels": [],
+    "manufacturer": "Google Nest",
+    "model": "Thermostat",
+    "model_id": null,
+    "modified_at": 1761262879.735704,
+    "name_by_user": "Nest Thermostat",
+    "name": "Living Room Thermostat",
+    "primary_config_entry": "01K89Q49GMJVM9CMZJS77KKD4A",
+    "serial_number": null,
+    "sw_version": null,
     "via_device_id": null
   }
 ]
