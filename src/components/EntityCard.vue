@@ -56,14 +56,11 @@ import {
   mdiLightbulb,
 } from '@mdi/js'
 
+import type { EntityWithRegistry } from '@/types/homeassistant'
+
 const rootStore = useRootStore()
 const props = defineProps<{
-  entity: {
-    entity_id: string
-    name?: string
-    original_name: string
-    device_name?: string
-  }
+  entity: EntityWithRegistry
 }>()
 
 const entityState = computed(() => {

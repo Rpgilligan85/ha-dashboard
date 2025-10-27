@@ -6,17 +6,23 @@ import {
   createConnection,
   subscribeEntities,
   callService,
-  type HassEntities,
   type Connection,
+  type HassEntities,
 } from 'home-assistant-js-websocket'
 import { groupBy } from 'lodash'
+import type {
+  HAEntities,
+  HADevice,
+  HAEntityRegistryEntry,
+  EntityWithRegistry,
+} from '@/types/homeassistant'
 
 import entitiesWS from '@/assets/ent.json' with { type: 'json' }
 import entityList from '@/assets/entities.json' with { type: 'json' }
 import deviceList from '@/assets/devices.json' with { type: 'json' }
 
 export const useRootStore = defineStore('root', () => {
-  const entities: Ref<HassEntities | null> = ref(null)
+  const entities: Ref<HAEntities | null> = ref(null)
   const connection: Ref<Connection | null> = ref(null)
   const haUrl = ref<string>(import.meta.env.VITE_HA_URL)
   const token = ref<string>(import.meta.env.VITE_HA_TOKEN)
@@ -24,15 +30,15 @@ export const useRootStore = defineStore('root', () => {
   const toggleEvents = ['light.', 'remote.', 'fan.', 'switch.light']
   const ignoreList = ['switch.light_led', 'select.ceiling_fan_light_preset']
   const useLocalData = ref(true)
-  const finalData = ref<any[]>([])
+  const finalData = ref<EntityWithRegistry[]>([])
 
-  const getDataByArea: Ref<Record<string, any[]>> = computed(() => {
+  const getDataByArea = computed<Record<string, EntityWithRegistry[]>>(() => {
     return groupBy(finalData.value, 'area_id')
   })
 
   const loadData = async (): Promise<void> => {
     if (useLocalData.value) {
-      entities.value = entitiesWS as HassEntities
+      entities.value = entitiesWS as HAEntities
       console.log('entitiesWS', entitiesWS)
       console.log('entityList', entityList)
       console.log('deviceList', deviceList)
@@ -44,17 +50,17 @@ export const useRootStore = defineStore('root', () => {
 
         connection.value = conn
 
-        const deviceList: any[] = await conn.sendMessagePromise({
+        const deviceList: HADevice[] = await conn.sendMessagePromise({
           type: 'config/device_registry/list',
         })
-        const entityList: any[] = await conn.sendMessagePromise({
+        const entityList: HAEntityRegistryEntry[] = await conn.sendMessagePromise({
           type: 'config/entity_registry/list',
         })
         console.log('deviceList', deviceList)
         console.log('entityList', entityList)
 
         subscribeEntities(conn, (ent: HassEntities) => {
-          entities.value = ent
+          entities.value = ent as HAEntities
           console.log('ENT', ent)
         })
 
@@ -66,7 +72,10 @@ export const useRootStore = defineStore('root', () => {
     }
   }
 
-  const createDatastructure = async (deviceList: any[], entityList: any[]) => {
+  const createDatastructure = async (
+    deviceList: HADevice[] | any[],
+    entityList: HAEntityRegistryEntry[] | any[],
+  ) => {
     try {
       const filteredDevices = deviceList.filter((device) => device.area_id)
 
@@ -81,7 +90,11 @@ export const useRootStore = defineStore('root', () => {
             const isIgnored = ignoreList.some((ignored) => entity.entity_id === ignored)
 
             if (matchesPrefix && !isIgnored) {
-              finalData.value.push({ ...entity, area_id: device.area_id, device_name: device.name })
+              finalData.value.push({
+                ...entity,
+                area_id: device.area_id,
+                device_name: device.name,
+              } as EntityWithRegistry)
             }
           }
         }

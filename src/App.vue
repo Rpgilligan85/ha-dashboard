@@ -3,40 +3,30 @@
     <ThemeToggle />
 
     <div class="app-content">
-      <!-- Weather and Climate Section -->
-      <section v-if="weatherEntities.length > 0 || climateEntities.length > 0" class="top-section">
-        <!-- Weather -->
-        <div v-if="weatherEntities.length > 0" class="weather-container">
-          <h1 class="section-title">Weather</h1>
-          <div class="weather-grid">
-            <template v-for="entityId in weatherEntities" :key="entityId">
-              <WeatherCard :entity-id="entityId" />
-            </template>
-          </div>
-        </div>
+      <!-- Main Grid Layout -->
+      <div class="main-grid">
+        <!-- Weather Cards -->
+        <template v-for="entityId in weatherEntities" :key="`weather-${entityId}`">
+          <WeatherCard :entity-id="entityId" />
+        </template>
 
         <!-- Climate/Thermostats -->
-        <div v-if="climateEntities.length > 0" class="climate-container">
-          <h1 class="section-title">Climate</h1>
-          <div class="climate-grid">
-            <template v-for="entityId in climateEntities" :key="entityId">
-              <NestThermostat :entity-id="entityId" />
-            </template>
-          </div>
-        </div>
-      </section>
+        <template v-for="entityId in climateEntities" :key="`climate-${entityId}`">
+          <NestThermostat :entity-id="entityId" />
+        </template>
 
-      <!-- Rooms Section -->
-      <section class="rooms-section">
-        <div v-for="(entities, room) in roomEntities" :key="room" class="room-group">
-          <h2 class="room-title">{{ fixRoomName(room) }}</h2>
-          <div class="entities-grid">
-            <template v-for="entity in entities" :key="entity.entity_id">
-              <EntityCard :entity="entity" />
-            </template>
+        <!-- Room Groups -->
+        <template v-for="(entities, room) in roomEntities" :key="`room-${room}`">
+          <div class="room-group">
+            <h2 class="room-title">{{ fixRoomName(room) }}</h2>
+            <div class="entities-grid">
+              <template v-for="entity in entities" :key="entity.entity_id">
+                <EntityCard :entity="entity" />
+              </template>
+            </div>
           </div>
-        </div>
-      </section>
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +37,7 @@ import { useRootStore } from './stores/root'
 import { useThemeStore } from './stores/theme'
 import EntityCard from './components/EntityCard.vue'
 import WeatherCard from './components/WeatherCard.vue'
+// import NestThermostat2 from './components/NestThermostat2.vue'
 import NestThermostat from './components/NestThermostat.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
 
@@ -96,54 +87,25 @@ const fixRoomName = (name: string) => {
 .app-content {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
-/* Top Section (Weather + Climate) */
-.top-section {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.weather-container,
-.climate-container {
-  width: 100%;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--p-text-color);
-  margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
-}
-
-.weather-grid {
+/* Main Grid - Masonry-style layout */
+.main-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1.5rem;
+  align-items: start;
 }
 
-.climate-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Rooms Section */
-.rooms-section {
-  display: grid;
-  gap: 2rem;
-}
-
+/* Room Groups */
 .room-group {
   background: var(--p-surface-0);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  min-height: min-content;
 }
 
 .p-dark .room-group {
@@ -155,7 +117,7 @@ const fixRoomName = (name: string) => {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--p-text-color);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--p-surface-200);
 }
@@ -176,13 +138,7 @@ const fixRoomName = (name: string) => {
     padding: 0.75rem;
   }
 
-  .section-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .weather-grid,
-  .climate-grid {
+  .main-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -200,69 +156,47 @@ const fixRoomName = (name: string) => {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
-
-  .rooms-section {
-    gap: 1rem;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
   .app-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
-  .weather-grid {
+  .main-grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  }
-
-  .climate-grid {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
   }
 
   .entities-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  .top-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1439px) {
   .app-content {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
-  .rooms-section {
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  }
-
-  .weather-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-  }
-
-  .climate-grid {
+  .main-grid {
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 2rem;
-  }
-
-  .top-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .rooms-section {
-    grid-template-columns: repeat(2, 1fr);
+  .app-content {
+    padding: 2rem;
   }
 
-  .top-section {
-    grid-template-columns: repeat(2, 1fr);
+  .main-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 }
 </style>

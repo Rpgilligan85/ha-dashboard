@@ -32,6 +32,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRootStore } from '@/stores/root'
+import type { HAWeatherEntity } from '@/types/homeassistant'
 import Card from '@/volt/Card.vue'
 
 const rootStore = useRootStore()
@@ -40,7 +41,7 @@ const props = defineProps<{
 }>()
 
 const weatherData = computed(() => {
-  return rootStore.entities?.[props.entityId]
+  return rootStore.entities?.[props.entityId] as HAWeatherEntity | undefined
 })
 
 const entityName = computed(() => {
