@@ -5,7 +5,12 @@
       "Bash(npm run lint)",
       "Bash(npm run build:*)",
       "Bash(npm run build-only:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npm install:*)",
+      "Bash([ -f \"src/types/dashboard.ts\" ])",
+      "Bash([ -f \"src/composables/useDashboardLayout.ts\" ])",
+      "Bash([ -f \"LAYOUT_CONFIG.md\" ])",
+      "Bash([ -f \"dashboard-layout.example.json\" ])"
     ],
     "deny": [],
     "ask": []

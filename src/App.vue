@@ -3,52 +3,40 @@
     <ThemeToggle />
 
     <div class="app-content">
-      <!-- Main Grid Layout -->
-      <div class="main-grid">
-        <!-- Weather Cards -->
-        <template v-for="entityId in weatherEntities" :key="`weather-${entityId}`">
-          <WeatherCard :entity-id="entityId" />
-        </template>
+      <!-- Grouping Selector -->
+      <GroupSelector v-model="groupingMode" @update:model-value="handleGroupingChange" />
 
-        <!-- Climate/Thermostats -->
-        <template v-for="entityId in climateEntities" :key="`climate-${entityId}`">
-          <NestThermostat :entity-id="entityId" />
-        </template>
-
-        <!-- Room Groups -->
-        <template v-for="(entities, room) in roomEntities" :key="`room-${room}`">
-          <div class="room-group">
-            <h2 class="room-title">{{ fixRoomName(room) }}</h2>
-            <div class="entities-grid">
-              <template v-for="entity in entities" :key="entity.entity_id">
-                <EntityCard :entity="entity" />
-              </template>
-            </div>
-          </div>
-        </template>
-      </div>
+      <!-- GridStack Layout -->
+      <GridStackLayout :items="gridItems" @change="handleLayoutChange" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from 'vue'
+import { onMounted, computed, h } from 'vue'
 import { useRootStore } from './stores/root'
 import { useThemeStore } from './stores/theme'
-import EntityCard from './components/EntityCard.vue'
+import { useEntityGrouping } from './composables/useEntityGrouping'
+import { useDashboardLayout } from './composables/useDashboardLayout'
+import type { GridItem } from './components/GridStackLayout.vue'
+import DynamicEntity from './components/DynamicEntity.vue'
 import WeatherCard from './components/WeatherCard.vue'
-// import NestThermostat2 from './components/NestThermostat2.vue'
 import NestThermostat from './components/NestThermostat.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
+import GroupSelector from './components/GroupSelector.vue'
+import GridStackLayout from './components/GridStackLayout.vue'
 
 const rootStore = useRootStore()
 const themeStore = useThemeStore()
+const { groupingMode, currentGroups, setGroupingMode } = useEntityGrouping()
 
 onMounted(async () => {
   themeStore.initTheme()
   if (!rootStore.entities) {
     await rootStore.loadData()
   }
+  // Load saved layout from localStorage
+  loadLayout()
 })
 
 // Get weather entities directly from entities store
@@ -63,13 +51,92 @@ const climateEntities = computed(() => {
   return Object.keys(rootStore.entities).filter((entityId) => entityId.startsWith('climate.'))
 })
 
-// Room entities remain the same (from finalData)
-const roomEntities = computed(() => {
-  return rootStore.getDataByArea
+// Create Entity Group Component wrapper
+const EntityGroup = (props: { groupName: string; entities: any[] }) => {
+  return h('div', { class: 'entity-group' }, [
+    h('h2', { class: 'group-title' }, props.groupName),
+    h(
+      'div',
+      { class: 'entities-container' },
+      props.entities.map((entity) =>
+        h(DynamicEntity, { entityId: entity.entity_id, key: entity.entity_id })
+      )
+    ),
+  ])
+}
+
+// Build default grid items from entities
+const defaultGridItems = computed<GridItem[]>(() => {
+  const items: GridItem[] = []
+  let currentY = 0
+
+  // Add weather cards
+  weatherEntities.value.forEach((entityId, index) => {
+    items.push({
+      id: `weather-${entityId}`,
+      component: WeatherCard,
+      props: { entityId },
+      w: 8,
+      h: 24,
+      x: 0,
+      y: currentY,
+    })
+    currentY += 8
+  })
+
+  // Add climate cards
+  currentY = 0
+  climateEntities.value.forEach((entityId, index) => {
+    items.push({
+      id: `climate-${entityId}`,
+      component: NestThermostat,
+      props: { entityId },
+      w: 6,
+      h: 50,
+      x: 0,
+      y: currentY,
+
+    })
+    currentY += 12
+  })
+
+  // Add entity groups based on current grouping mode
+  currentY = 0
+  currentGroups.value.forEach((group, index) => {
+
+    const entityCount = group.entities.length
+
+    items.push({
+      id: group.id,
+      component: EntityGroup,
+      props: { groupName: group.name, entities: group.entities },
+      w: 6,
+      h: entityCount * 12,
+      x: 12,
+      y: currentY,
+
+    })
+    currentY += entityCount * 4
+  })
+  console.log('Default items:', items)
+
+  return items
 })
 
-const fixRoomName = (name: string) => {
-  return name.charAt(0).toUpperCase() + name.slice(1).replace('_', ' ')
+// Use layout composable to manage persistence
+const { loadLayout, handleLayoutChange: saveLayoutChange, mergedItems } = useDashboardLayout(defaultGridItems)
+
+// Final grid items with saved layout applied
+const gridItems = computed(() => mergedItems.value)
+
+const handleLayoutChange = (items: any) => {
+  // Save layout configuration to localStorage via composable
+  console.log('Layout changed:', items)
+  saveLayoutChange(items)
+}
+
+const handleGroupingChange = (mode: any) => {
+  setGroupingMode(mode)
 }
 </script>
 
@@ -87,116 +154,59 @@ const fixRoomName = (name: string) => {
 .app-content {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 1.5rem;
 }
 
-/* Main Grid - Masonry-style layout */
-.main-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.5rem;
-  align-items: start;
+/* GridStack container styling */
+:deep(.grid-stack) {
+  background: transparent;
+  min-height: 100vh;
 }
 
-/* Room Groups */
-.room-group {
-  background: var(--p-surface-0);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+:deep(.grid-stack-item) {
   transition: all 0.3s ease;
-  min-height: min-content;
 }
 
-.p-dark .room-group {
-  background: var(--p-surface-800);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+/* Ensure cards fill their containers */entity-group
+
+
+/* Entity Groups */
+.entity-group {
+  background: transparent;
+  /* padding: 1.5rem; */
+  border: none;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: none;
+  overflow-y: auto;
 }
 
-.room-title {
+.p-dark .entity-group {
+  background: transparent;
+}
+
+.group-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--p-text-color);
   margin: 0 0 1rem 0;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--p-surface-200);
+  flex-shrink: 0;
 }
 
-.p-dark .room-title {
+.p-dark .group-title {
   border-bottom-color: var(--p-surface-700);
 }
 
-.entities-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+.entities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+  overflow-y: auto;
 }
 
-/* Responsive Design */
-@media (max-width: 640px) {
-  .app-content {
-    padding: 0.75rem;
-  }
-
-  .main-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .room-group {
-    padding: 1rem;
-    border-radius: 0.75rem;
-  }
-
-  .room-title {
-    font-size: 1.25rem;
-  }
-
-  .entities-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-  .app-content {
-    padding: 1.25rem;
-  }
-
-  .main-grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.25rem;
-  }
-
-  .entities-grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1439px) {
-  .app-content {
-    padding: 1.5rem;
-  }
-
-  .main-grid {
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  }
-}
-
-@media (min-width: 1440px) {
-  .app-content {
-    padding: 2rem;
-  }
-
-  .main-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1920px) {
-  .main-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
-}
 </style>

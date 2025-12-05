@@ -136,14 +136,16 @@ const formatCondition = (condition: string): string => {
 .weather-card {
   background: linear-gradient(135deg, var(--p-primary-500) 0%, var(--p-primary-700) 100%);
   color: white;
-  border: 1px solid var(--p-primary-600);
-  min-width: 300px;
-  max-width: 100%;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none;
+  box-shadow: none;
 }
 
 .p-dark .weather-card {
   background: linear-gradient(135deg, var(--p-primary-600) 0%, var(--p-primary-800) 100%);
-  border-color: var(--p-primary-700);
 }
 
 .weather-content {
@@ -218,10 +220,6 @@ const formatCondition = (condition: string): string => {
 }
 
 @media (max-width: 768px) {
-  .weather-card {
-    min-width: auto;
-  }
-
   .weather-content {
     flex-direction: column;
     text-align: center;
@@ -244,10 +242,6 @@ const formatCondition = (condition: string): string => {
 }
 
 @media (min-width: 1024px) {
-  .weather-card {
-    min-width: 400px;
-  }
-
   .weather-content {
     padding: 2rem;
   }

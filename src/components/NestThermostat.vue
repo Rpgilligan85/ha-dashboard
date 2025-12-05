@@ -531,35 +531,19 @@ const adjustTemp = async (delta: number) => {
 
 <style scoped lang="scss">
 .nest-thermostat {
-  background: var(--p-surface-0);
-  border: 1px solid var(--p-content-border-color);
-  border-radius: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.75rem;
   padding: 1.5rem;
   color: var(--p-text-color);
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 0 0 1px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
-
-  &:hover {
-    box-shadow:
-      0 4px 16px rgba(0, 0, 0, 0.08),
-      0 0 0 1px rgba(0, 0, 0, 0.03);
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: none;
 }
 
 .p-dark .nest-thermostat {
-  background: var(--p-surface-800);
-  border-color: var(--p-surface-700);
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    box-shadow:
-      0 4px 16px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(0, 0, 0, 0.15);
-  }
+  background: transparent;
 }
 
 .thermostat-header {

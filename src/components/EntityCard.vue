@@ -17,14 +17,14 @@
           </svg>
           <svg-icon
             type="mdi"
-            :path="getIcon(entityState, props.entity.entity_id)"
+            :path="getIcon(entityState, props.entityId)"
             class="entity-icon"
-            :class="getIconClass(entityState, props.entity.entity_id)"
+            :class="getIconClass(entityState, props.entityId)"
           />
         </div>
         <div class="entity-info">
           <div class="entity-name">
-            {{ props.entity.name ?? props.entity.original_name ?? props.entity.device_name }}
+            {{ entityName }}
           </div>
           <div class="entity-state">
             {{ formatState(entityState) }}
@@ -60,22 +60,31 @@ import type { EntityWithRegistry } from '@/types/homeassistant'
 
 const rootStore = useRootStore()
 const props = defineProps<{
-  entity: EntityWithRegistry
+  entityId: string
 }>()
 
+const entity = computed(() => {
+  const allEntities = rootStore.getDataByArea ? Object.values(rootStore.getDataByArea).flat() : []
+  return allEntities.find((e) => e.entity_id === props.entityId)
+})
+
 const entityState = computed(() => {
-  return rootStore.entities?.[props.entity.entity_id]?.state
+  return rootStore.entities?.[props.entityId]?.state
+})
+
+const entityName = computed(() => {
+  return entity.value?.name ?? entity.value?.original_name ?? entity.value?.device_name ?? props.entityId
 })
 
 const isActive = computed(() => entityState.value === 'on')
 
 const isToggleable = computed(() => {
-  return rootStore.toggleEvents.some((prefix) => props.entity.entity_id.startsWith(prefix))
+  return rootStore.toggleEvents.some((prefix) => props.entityId.startsWith(prefix))
 })
 
 const handleClick = async () => {
   if (isToggleable.value) {
-    await rootStore.updateState(props.entity.entity_id, entityState.value)
+    await rootStore.updateState(props.entityId, entityState.value)
   }
 }
 
@@ -123,23 +132,29 @@ const getIcon = (state: string | undefined, entityId: string): string => {
 .entity-card {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--p-surface-0);
+  background: var(--p-surface-100);
   border: 1px solid var(--p-surface-200);
+  border-radius: 0.5rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .p-dark .entity-card {
-  background: var(--p-surface-800);
-  border-color: var(--p-surface-700);
+  background: var(--p-surface-700);
+  border-color: var(--p-surface-600);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .entity-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-color: var(--p-primary-300);
 }
 
 .p-dark .entity-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border-color: var(--p-primary-500);
 }
 
@@ -151,13 +166,14 @@ const getIcon = (state: string | undefined, entityId: string): string => {
 
 .p-dark .entity-card.entity-active {
   background: linear-gradient(135deg, var(--p-primary-600) 0%, var(--p-primary-800) 100%);
+  border-color: var(--p-primary-700);
 }
 
 .entity-content {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .entity-icon-wrapper {

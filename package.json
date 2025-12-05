@@ -22,6 +22,7 @@
     "@mdi/js": "^7.4.47",
     "@tailwindcss/vite": "^4.1.15",
     "axios": "^1.12.2",
+    "gridstack": "^12.3.3",
     "home-assistant-js-websocket": "^9.5.0",
     "lodash": "^4.17.21",
     "pinia": "^3.0.3",

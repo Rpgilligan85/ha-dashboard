@@ -32,6 +32,42 @@ export const useRootStore = defineStore('root', () => {
   const useLocalData = ref(true)
   const finalData = ref<EntityWithRegistry[]>([])
 
+  // Usage tracking
+  const usageStats = ref<Record<string, number>>({})
+
+  // Load usage stats from localStorage
+  const loadUsageStats = () => {
+    try {
+      const saved = localStorage.getItem('entity-usage-stats')
+      if (saved) {
+        usageStats.value = JSON.parse(saved)
+      }
+    } catch (error) {
+      console.error('Failed to load usage stats:', error)
+    }
+  }
+
+  // Save usage stats to localStorage
+  const saveUsageStats = () => {
+    try {
+      localStorage.setItem('entity-usage-stats', JSON.stringify(usageStats.value))
+    } catch (error) {
+      console.error('Failed to save usage stats:', error)
+    }
+  }
+
+  // Track entity usage
+  const trackEntityUsage = (entityId: string) => {
+    if (!usageStats.value[entityId]) {
+      usageStats.value[entityId] = 0
+    }
+    usageStats.value[entityId]++
+    saveUsageStats()
+  }
+
+  // Load usage stats on store initialization
+  loadUsageStats()
+
   const getDataByArea = computed<Record<string, EntityWithRegistry[]>>(() => {
     return groupBy(finalData.value, 'area_id')
   })
@@ -120,6 +156,12 @@ export const useRootStore = defineStore('root', () => {
       console.error('No active connection to Home Assistant')
       return
     }
+
+    // Track usage
+    if (entityId) {
+      trackEntityUsage(entityId)
+    }
+
     if (useLocalData.value && entityId && entities.value && entities.value[entityId]) {
       entities.value[entityId].state = state === 'on' ? 'off' : 'on'
       return
@@ -147,6 +189,8 @@ export const useRootStore = defineStore('root', () => {
     connection,
     haUrl,
     token,
+    usageStats,
+    trackEntityUsage,
     createDatastructure,
     updateState,
     toggleEvents,
